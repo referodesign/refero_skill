@@ -108,6 +108,7 @@ git clone https://github.com/referodesign/refero_skill.git .cursor/skills/refero
 - `icons.md` — Sizing, optical corrections, libraries
 - `craft-details.md` — Focus states, forms, accessibility
 - `anti-ai-slop.md` — Avoiding the generic AI look
+- `copywriting.md` — UI copy, microcopy, and banned words
 - `mcp-tools.md` — Refero API reference
 - `example-workflow.md` — Complete design walkthrough
 
