@@ -18,8 +18,7 @@ Craft knowledge loads immediately. No account required.
 <summary>Manual installation</summary>
 
 ```bash
-git clone https://github.com/referodesign/refero_skill.git
-cp refero_skill/SKILL.md ~/.claude/skills/refero-design.md
+git clone https://github.com/referodesign/refero_skill.git ~/.claude/skills/refero-design
 ```
 
 On Claude.ai, add the contents of `SKILL.md` to your project knowledge.
@@ -28,13 +27,12 @@ On Claude.ai, add the contents of `SKILL.md` to your project knowledge.
 
 ---
 
-## What's in the skill
+## What it does
 
-**Live design research** — search across 150,000+ screens and 6,000+ user flows from real products. Every screen includes metadata on components, typography, colors, and layout. Requires Refero Pro.
-
-**Craft knowledge** — typography scales, color systems, spacing, motion, icons, copywriting patterns, and anti-slop rules. Loads automatically, no account needed.
-
-**Methodology** — a complete workflow from discovery questions through research, analysis, and implementation, with quality gates and validation.
+1. **Searches real products** — finds relevant screens and user flows across 150,000+ products from Stripe, Linear, Notion, Figma, and thousands more. Every result includes metadata on components, typography, colors, and layout — not just images. _(Requires [Refero Pro](#unlock-live-design-research))_
+2. **Extracts patterns** — identifies specific design decisions and builds a reference list before touching code.
+3. **Applies craft knowledge** — uses built-in guides on typography, color, spacing, motion, icons, and copywriting. Flags anti-slop patterns before they appear.
+4. **Designs with evidence** — every decision traces back to a real product or a craft rule, not a training data average.
 
 <details>
 <summary>Files</summary>
