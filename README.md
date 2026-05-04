@@ -2,9 +2,7 @@
 
 # Refero Skill
 
-**Design with data**
-
-Instead of guessing from training data, your agent researches 150,000+ real screens and flows from Stripe, Linear, Notion, and Figma before designing. Built-in craft knowledge on typography, color, copywriting, and anti-slop rules is included free — live search requires [Refero Pro](#unlock-live-design-research).
+Real designers study real products before building. Now your agent can too — 150,000+ screens and flows from Stripe, Linear, Notion, and Figma, plus built-in knowledge on typography, color, copywriting, and anti-slop rules.
 
 ## Install
 
