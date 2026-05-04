@@ -1,6 +1,12 @@
 ---
 name: refero-design
 description: Research-First design methodology using Refero MCP. Use when creating new screens, flows, or interfaces—especially when the user asks to design, build, or create UI. Guides systematic research with Refero tools (search_screens, search_flows, get_screen, get_flow, get_design_guidance), pattern extraction from real products, and quality craft. Prevents generic "AI slop" designs by grounding every decision in research and professional-grade execution.
+license: MIT
+compatibility: Requires Refero MCP server configured at https://api.refero.design/v1/mcp with a valid Bearer token.
+metadata:
+  author: referodesign
+  version: "1.0"
+  website: https://refero.design
 ---
 
 # Research-First Design
