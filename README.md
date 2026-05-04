@@ -1,8 +1,8 @@
 ![Refero Design Skill](assets/banner.png)
 
-# Refero Design Skill
+# Refero Skill
 
-**Design with data, not defaults.**
+**Design with data**
 
 AI agents design from training data averages. Generic layouts, safe colors, patterns you've seen a thousand times. This skill gives your agent something it never had: access to real design research.
 
@@ -14,7 +14,7 @@ Works with Claude Code, Cursor, Gemini CLI, Lovable, and any MCP-compatible agen
 npx skills add referodesign/refero_skill
 ```
 
-That's it. All craft knowledge — typography, color, anti-slop rules, copywriting, methodology — loads into your agent immediately. No account required.
+That's it. All craft knowledge — typography, color, anti-slop rules, copywriting, methodology — loads into your agent immediately. 
 
 <details>
 <summary>Manual installation</summary>
