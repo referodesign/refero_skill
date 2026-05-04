@@ -24,58 +24,19 @@ Without this data, AI agents guess. They produce "safe" designs that look like e
 
 **Anti-slop rules.** Explicit guidance to avoid the generic AI look: no default indigo, no blob backgrounds, no hero-features-pricing-FAQ templates. What makes design feel human versus generated.
 
+**Copywriting.** UI copy principles, microcopy patterns for buttons, errors, and empty states. A banned-words list that cuts corporate zombie language and AI slop markers.
+
 **Methodology.** A complete workflow from discovery questions through research, analysis, and implementation. Quality gates and side-by-side validation against real products.
 
 ## Install
+
+Works with Claude Code, Cursor, Gemini CLI, Lovable, and any MCP-compatible agent.
 
 ```bash
 npx skills add referodesign/refero_skill
 ```
 
-Requires [Refero MCP](#setup-refero-mcp) to connect your agent to the design library.
-
----
-
-<details id="setup-refero-mcp">
-<summary>Setup Refero MCP</summary>
-
-### 1. Get your token
-
-[refero.design](https://refero.design)
-
-### 2. Connect
-
-**Claude Code:**
-```bash
-claude mcp add --transport http refero https://api.refero.design/v1/mcp --header "Authorization: <token>"
-```
-
-**Gemini CLI:**
-```bash
-gemini mcp add --transport http refero https://api.refero.design/v1/mcp --header "Authorization: <token>"
-```
-
-**Cursor** — add to `.cursor/mcp.json`:
-```json
-{
-  "mcpServers": {
-    "refero": {
-      "url": "https://api.refero.design/v1/mcp",
-      "headers": { "Authorization": "<token>" }
-    }
-  }
-}
-```
-
-**Lovable:** Settings → Connectors → New MCP server → `https://api.refero.design/v1/mcp` → Bearer token
-
-**Other tools:**
-```
-URL: https://api.refero.design/v1/mcp
-Auth: Bearer <token>
-```
-
-</details>
+That's it. All craft knowledge — typography, color, anti-slop rules, copywriting, methodology — loads into your agent immediately. No account required.
 
 <details>
 <summary>Troubleshooting</summary>
@@ -90,6 +51,70 @@ git clone https://github.com/referodesign/refero_skill.git .cursor/skills/refero
 ```
 
 </details>
+
+## Unlock live design research
+
+The skill includes built-in knowledge. To also give your agent live access to 150,000+ real app screens and 6,000+ user flows, connect the Refero MCP.
+
+**Step 1 — Get Refero Pro**
+
+Go to [refero.design/mcp](https://refero.design/mcp) and activate a Pro subscription.
+
+**Step 2 — Connect your tool**
+
+<details id="setup-refero-mcp">
+<summary>Claude Code</summary>
+
+```bash
+claude mcp add --transport http refero https://api.refero.design/mcp --header "Authorization: Bearer <token>"
+```
+
+</details>
+
+<details>
+<summary>Cursor</summary>
+
+Add to `.cursor/mcp.json`:
+```json
+{
+  "mcpServers": {
+    "refero": {
+      "url": "https://api.refero.design/mcp",
+      "headers": { "Authorization": "Bearer <token>" }
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+<summary>Gemini CLI</summary>
+
+```bash
+gemini mcp add --transport http refero https://api.refero.design/mcp --header "Authorization: Bearer <token>"
+```
+
+</details>
+
+<details>
+<summary>Lovable</summary>
+
+Settings → Connectors → New MCP server → `https://api.refero.design/mcp` → Bearer token
+
+</details>
+
+<details>
+<summary>Other tools</summary>
+
+```
+URL: https://api.refero.design/mcp
+Auth: Bearer <token>
+```
+
+</details>
+
+The first time you call Refero, a browser window opens to sign in. After that it's automatic.
 
 <details>
 <summary>What's inside</summary>
