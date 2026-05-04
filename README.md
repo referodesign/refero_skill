@@ -6,28 +6,6 @@
 
 AI agents design from training data averages. Generic layouts, safe colors, patterns you've seen a thousand times. This skill gives your agent something it never had: access to real design research.
 
-## Real-time design research
-
-Before creating anything, your agent searches [Refero](https://refero.design): 150,000+ screens and 6,000+ user flows from Stripe, Linear, Notion, Figma, Vercel, and thousands of the best products ever built.
-
-Not just screenshots. Every screen has rich metadata: components, patterns, typography, colors, layout structures. Your agent doesn't just see designs, it understands them. User flows are broken down step by step: what each screen does, what content it shows, how users move through the experience.
-
-Semantic search that finds anything. Pricing page with annual toggle? Fintech onboarding? Dark mode dashboard? Cancellation flow that reduces churn? If the pattern exists, your agent will find it. Research that takes designers hours, done in seconds.
-
-Without this data, AI agents guess. They produce "safe" designs that look like everything else. With Refero, your agent researches first, then designs with confidence.
-
----
-
-**Also in this skill:**
-
-**Craft knowledge.** Deep guides on typography, color, spacing, motion, and icons. Letter-spacing rules, color token systems, animation timing curves. The details that separate polished products from rough prototypes.
-
-**Anti-slop rules.** Explicit guidance to avoid the generic AI look: no default indigo, no blob backgrounds, no hero-features-pricing-FAQ templates. What makes design feel human versus generated.
-
-**Copywriting.** UI copy principles, microcopy patterns for buttons, errors, and empty states. A banned-words list that cuts corporate zombie language and AI slop markers.
-
-**Methodology.** A complete workflow from discovery questions through research, analysis, and implementation. Quality gates and side-by-side validation against real products.
-
 ## Install
 
 Works with Claude Code, Cursor, Gemini CLI, Lovable, and any MCP-compatible agent.
@@ -52,9 +30,48 @@ git clone https://github.com/referodesign/refero_skill.git .cursor/skills/refero
 
 </details>
 
+---
+
+## What's in the skill
+
+**Real-time design research.** Before creating anything, your agent searches [Refero](https://refero.design): 150,000+ screens and 6,000+ user flows from Stripe, Linear, Notion, Figma, Vercel, and thousands of the best products ever built. Every screen has rich metadata: components, patterns, typography, colors, layout structures. User flows are broken down step by step. Semantic search finds anything — pricing pages, onboarding flows, dark mode dashboards, cancellation flows. Research that takes designers hours, done in seconds. Requires [Refero Pro](#unlock-live-design-research).
+
+**Craft knowledge.** Deep guides on typography, color, spacing, motion, and icons. Letter-spacing rules, color token systems, animation timing curves. The details that separate polished products from rough prototypes.
+
+**Anti-slop rules.** Explicit guidance to avoid the generic AI look: no default indigo, no blob backgrounds, no hero-features-pricing-FAQ templates. What makes design feel human versus generated.
+
+**Copywriting.** UI copy principles, microcopy patterns for buttons, errors, and empty states. A banned-words list that cuts corporate zombie language and AI slop markers.
+
+**Methodology.** A complete workflow from discovery questions through research, analysis, and implementation. Quality gates and side-by-side validation against real products.
+
+<details>
+<summary>Files</summary>
+
+**SKILL.md** — Research-First methodology
+- Discovery questions before designing
+- Research strategies and query patterns
+- Analysis frameworks and steal lists
+- Design craft summaries
+- Quality gates and validation
+
+**Reference guides:**
+- `typography.md` — Scale, pairing, letter-spacing, line-height
+- `color.md` — Palettes, tokens, dark mode, contrast
+- `motion.md` — Timing, easing, micro-interactions
+- `icons.md` — Sizing, optical corrections, libraries
+- `craft-details.md` — Focus states, forms, accessibility
+- `anti-ai-slop.md` — Avoiding the generic AI look
+- `copywriting.md` — UI copy, microcopy, and banned words
+- `mcp-tools.md` — Refero API reference
+- `example-workflow.md` — Complete design walkthrough
+
+</details>
+
+---
+
 ## Unlock live design research
 
-The skill includes built-in knowledge. To also give your agent live access to 150,000+ real app screens and 6,000+ user flows, connect the Refero MCP.
+To give your agent live access to 150,000+ real app screens and 6,000+ user flows, connect the Refero MCP.
 
 **Step 1 — Get Refero Pro**
 
@@ -62,7 +79,7 @@ Go to [refero.design/mcp](https://refero.design/mcp) and activate a Pro subscrip
 
 **Step 2 — Connect your tool**
 
-<details id="setup-refero-mcp">
+<details id="unlock-live-design-research">
 <summary>Claude Code</summary>
 
 ```bash
@@ -115,29 +132,6 @@ Auth: Bearer <token>
 </details>
 
 The first time you call Refero, a browser window opens to sign in. After that it's automatic.
-
-<details>
-<summary>What's inside</summary>
-
-**SKILL.md** — Research-First methodology
-- Discovery questions before designing
-- Research strategies and query patterns  
-- Analysis frameworks and steal lists
-- Design craft summaries
-- Quality gates and validation
-
-**Reference guides:**
-- `typography.md` — Scale, pairing, letter-spacing, line-height
-- `color.md` — Palettes, tokens, dark mode, contrast
-- `motion.md` — Timing, easing, micro-interactions
-- `icons.md` — Sizing, optical corrections, libraries
-- `craft-details.md` — Focus states, forms, accessibility
-- `anti-ai-slop.md` — Avoiding the generic AI look
-- `copywriting.md` — UI copy, microcopy, and banned words
-- `mcp-tools.md` — Refero API reference
-- `example-workflow.md` — Complete design walkthrough
-
-</details>
 
 ## License
 
