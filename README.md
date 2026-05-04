@@ -17,16 +17,14 @@ npx skills add referodesign/refero_skill
 That's it. All craft knowledge — typography, color, anti-slop rules, copywriting, methodology — loads into your agent immediately. No account required.
 
 <details>
-<summary>Troubleshooting</summary>
+<summary>Manual installation</summary>
 
 ```bash
-npx skills add referodesign/refero_skill --agent cursor
+git clone https://github.com/referodesign/refero_skill.git
+cp refero_skill/SKILL.md ~/.claude/skills/refero-design.md
 ```
 
-Or clone:
-```bash
-git clone https://github.com/referodesign/refero_skill.git .cursor/skills/refero-design
-```
+On Claude.ai, add the contents of `SKILL.md` to your project knowledge.
 
 </details>
 
@@ -132,6 +130,10 @@ Auth: Bearer <token>
 </details>
 
 The first time you call Refero, a browser window opens to sign in. After that it's automatic.
+
+## Contributing
+
+To add a new skill, create a directory under `skills/` with a `SKILL.md` file following the [Agent Skills](https://agentskills.io/) format.
 
 ## License
 
