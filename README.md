@@ -29,7 +29,7 @@ Without this data, AI agents guess. They produce "safe" designs that look like e
 ## Install
 
 ```bash
-npx skills add https://github.com/bbssppllvv/refero_skill
+npx skills add referodesign/refero_skill
 ```
 
 Requires [Refero MCP](#setup-refero-mcp) to connect your agent to the design library.
@@ -81,12 +81,12 @@ Auth: Bearer <token>
 <summary>Troubleshooting</summary>
 
 ```bash
-npx skills add https://github.com/bbssppllvv/refero_skill --agent cursor
+npx skills add referodesign/refero_skill --agent cursor
 ```
 
 Or clone:
 ```bash
-git clone https://github.com/bbssppllvv/refero_skill.git .cursor/skills/refero-design
+git clone https://github.com/referodesign/refero_skill.git .cursor/skills/refero-design
 ```
 
 </details>
