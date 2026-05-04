@@ -2,7 +2,7 @@
 
 # Refero Skill
 
-Real designers study real products before building. Now your agent can too — 150,000+ screens and flows from Stripe, Linear, Notion, and Figma, plus built-in knowledge on typography, color, copywriting, and anti-slop rules.
+An agent skill that gives your AI access to 150,000+ real app screens and 6,000+ user flows from Stripe, Linear, Notion, Figma, and the best-designed products ever built — plus craft knowledge on typography, color, and copywriting. Your agent researches real references before designing, not training data averages.
 
 ## Install
 
