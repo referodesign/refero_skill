@@ -66,12 +66,13 @@ If you cannot answer those, choose a sharper product-specific direction: technic
 utilitarian, high-contrast, image-led, data-dense, playful, industrial, clinical,
 luxury, or another style grounded in research.
 
-Specific fingerprint to avoid: a giant display serif hero where one word, phrase, or
-entire second line is italicized and color-shifted only to create "taste." This is now a
-common AI default. Use italic display emphasis only when a strong reference uses it and
-the content role justifies it: quotation, editorial voice, title treatment, or a real
-brand/type-system rule. Otherwise create distinction through layout, scale, weight,
-media, interaction, or a source-backed color role.
+Specific fingerprint to avoid: a headline where one word or short phrase is swapped into
+a different display/serif/script face, italicized, and/or color-shifted only to create "taste."
+The base headline can be serif or sans; the slop is the decorative one-word treatment.
+This is now a common AI default. Use contrasting word treatment only when a strong
+reference uses it and the content role justifies it: quotation, editorial voice, title
+treatment, or a real brand/type-system rule. Otherwise create distinction through layout,
+scale, weight, media, interaction, or a source-backed color role.
 
 Serif fonts and earthy palettes are not banned. Autopilot "calm editorial" is.
 
@@ -177,7 +178,7 @@ available and appropriate.
 **Typography symptoms:**
 - Same font as every other AI site, same weight throughout
 - No distinction between display and body text
-- Oversized serif hero type with one italic word/line used only to feel "tasteful"
+- One-word/short-phrase serif, italic, or color highlight used only to feel "tasteful"
 - Missing letter-spacing on ALL CAPS and small text
 
 **Color symptoms:**
@@ -239,7 +240,7 @@ Before shipping any design:
 □ Color mode is light unless brief explicitly asks for dark
 □ Serif display / warm editorial treatment is justified by product context
 □ Earth-tone palette is research-backed, not a safe default
-□ No giant serif hero with an italic word/line unless research and content role justify it
+□ No decorative one-word serif/italic/color highlight unless research and content role justify it
 □ Strong reference traits were preserved, not averaged away
 □ Source token/component roles were preserved
 □ Image/media roles are preserved with a real asset, appropriate primitive, or intentional placeholder

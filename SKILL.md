@@ -459,9 +459,10 @@ Core craft rules:
   prefer an honest, well-sized placeholder over a poor fake illustration or photo.
 - Use brand-appropriate colors from research. Do not default to indigo/violet unless the
   user explicitly asks for it.
-- Treat "calm editorial" as a current AI-slop risk. Do not default to oversized serif
-  hero type, italic display words/lines, warm ivory/cream canvases, or olive/clay/terracotta
-  palettes unless research and product context justify them.
+- Treat "calm editorial" as a current AI-slop risk. Do not default to decorative headline
+  word swaps: one word or short phrase set in a different display/serif/script/italic
+  style or accent color, warm ivory/cream canvases, or olive/clay/terracotta palettes unless
+  research and product context justify them.
 - Avoid generic hero -> features grid -> pricing -> FAQ -> CTA unless research supports it.
 - Use real product evidence for copy, trust signals, objection handling, and section order.
 - Create at least one memorable detail: a visual move, interaction, layout choice, or copy
@@ -485,7 +486,7 @@ Before final delivery, confirm:
 - Can every major design choice be traced to a reference, user constraint, or craft rule?
 - Did I produce a concept and decision ledger before implementation?
 - Does the implementation avoid generic AI design defaults?
-- Did I avoid the calm editorial serif + italic word/line + earth-tone default unless justified?
+- Did I avoid decorative serif/italic/color word swaps unless reference and content role justify them?
 - Does the result fit the user's product, audience, and constraints?
 
 If the answer is no, research or refine more before delivering.
