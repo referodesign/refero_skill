@@ -39,7 +39,7 @@ productivity SaaS with airy spacing
 enterprise analytics product marketing
 ```
 
-Open 3-4 strong styles with `refero_get_styles`; full styles are large, so split larger
+Open 3-4 strong styles with `refero_get_style`; full styles are large, so split larger
 research into multiple batches.
 
 ### Style Findings
@@ -183,6 +183,7 @@ Journey logic:
 |------|----------|--------|--------------------|-----|
 | Palette | White, charcoal, cool neutrals, muted green accent | Style B + fintech reference + brief | Accent only for value proof and selected actions | Trustworthy and precise; avoids generic blue/purple SaaS |
 | Typography | Sans-led hierarchy, tight headings, readable 15-16px body | Style B + Style A hierarchy | Use hierarchy, not decorative serif voice | Premium without becoming decorative or literary |
+| Layout | Precise grid, compact comparison structure, proof near decision points | Style B + pricing screens | Grid is the core layout rule, not generic stacked sections | Keeps the page scannable for evaluation buyers |
 | Cards | Thin borders, subtle selected state, no heavy shadows | Pricing screens + anti-slop card rule | Cards only for plan comparison and interaction | Keeps evaluation calm and scannable |
 | CTA hierarchy | Pro trial primary, Enterprise sales secondary | Pricing screens + buyer journey | Primary treatment only for self-serve action | Supports self-serve and sales-led paths |
 | Proof | ROI metrics near pricing, security near Enterprise | Screen research + buyer objections | Proof modules near the decision they support | Answers buyer objections where they appear |

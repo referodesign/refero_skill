@@ -96,8 +96,9 @@ create anything with a visual component.
 
 A style is a semantic design reference extracted from a real web marketing/product page.
 It is not a screenshot and not a component library. Search results give previews; full
-style references from `refero_get_styles` provide design guidance such as visual thesis,
-tokens, typography, spacing, surfaces, components, imagery treatment, and do/don't rules.
+style references from `refero_get_style` provide design guidance such as visual thesis,
+tokens, typography, layout/composition, section rhythm, spacing, elevation, surfaces,
+components, imagery treatment, implementation notes, and do/don't rules.
 
 Current limitation: Refero styles currently cover web marketing/product pages such as
 landing pages, pricing pages, product marketing sites, editorial brand sites, and SaaS
@@ -110,7 +111,8 @@ Use styles for:
 - look and feel
 - brand direction
 - landing pages and marketing pages
-- typography, palette, spacing, radius, surfaces
+- typography, palette, layout, section structure, spacing, radius, elevation, surfaces
+- component treatments and sometimes component/code examples
 - imagery and product screenshot treatment
 - design-system inspiration
 - making a generic interface feel more tasteful
@@ -161,7 +163,7 @@ Recommended loop:
 2. Include one broad aesthetic query.
 3. Include one domain/category query.
 4. Include one known-brand or strong-product query when relevant.
-5. Retrieve 3-4 strong styles with `refero_get_styles`; full styles are large, so split larger research into multiple batches.
+5. Retrieve 3-4 strong styles with `refero_get_style`; full styles are large, so split larger research into multiple batches.
 6. Compare what each style contributes.
 7. Choose one primary foundation and borrow 1-2 specific details from other styles.
 8. Lock the primary reference's signature traits before implementation.
@@ -186,8 +188,11 @@ Extract from styles:
 - typography personality and type scale
 - color roles and accent discipline
 - spacing density and rhythm
+- layout system, section rhythm, and composition patterns
 - card/button/surface treatments
 - borders, shadows, radius
+- elevation and depth rules
+- component examples and implementation/code notes when present
 - imagery or product screenshot treatment
 - do/don't rules
 - one memorable visual move to adapt

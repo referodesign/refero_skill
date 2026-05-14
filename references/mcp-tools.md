@@ -15,8 +15,9 @@ Refero has three research layers:
 
 Search curated design styles using semantic search.
 
-Use first for any task with visual direction, brand feel, typography, color, spacing,
-imagery, art direction, design-system inspiration, or visual polish.
+Use first for any task with visual direction, brand feel, typography, color, layout,
+spacing, elevation, components, imagery, art direction, design-system inspiration, or
+visual polish.
 
 What results contain:
 
@@ -64,7 +65,7 @@ Current coverage:
 - Even for product UI, use styles to establish taste and visual language, then use
   screens/flows for product-specific logic.
 
-### `refero_get_styles`
+### `refero_get_style`
 
 Retrieve full design style references for one or more style UUIDs.
 
@@ -76,9 +77,9 @@ What results may include:
 - visual thesis / north star
 - colors and usage roles
 - typography and type scale
-- spacing, radius, shadows, surfaces
-- component treatments
-- layout guidance
+- layout guidance, section rhythm, and composition patterns
+- spacing, radius, shadows, elevation, surfaces
+- component treatments and sometimes component/code examples
 - imagery or product screenshot treatment
 - do/don't rules
 - agent prompt guidance or implementation notes
@@ -87,13 +88,17 @@ Parameters:
 
 | Parameter | Type | Required | Notes |
 |-----------|------|----------|-------|
-| `style_id` | string[] | Yes | One or more style UUIDs from `refero_search_styles`. Retrieve several strong styles when exploring visual direction. |
+| `style_id` | string | Yes* | Style UUID from `refero_search_styles`. *Exactly one of `style_id` or `style_ids` must be provided.* |
+| `style_ids` | string[] | Yes* | Array of style UUIDs. Full styles are large; recommended max batch is 3-4. *Exactly one of `style_id` or `style_ids` must be provided.* |
+| `response_format` | enum | No | `json` or `md`. Default: `md`. |
 
 How to use returned styles:
 
 - Treat each style as a reference ingredient, not a template.
 - Pick one primary foundation for mood and density.
 - Borrow 1-2 specific details from other styles.
+- Extract layout, component, spacing, and elevation rules, not only colors and fonts.
+- Preserve source token/component roles instead of repurposing them.
 - Translate everything to the user's product, audience, and constraints.
 
 ## Screens
