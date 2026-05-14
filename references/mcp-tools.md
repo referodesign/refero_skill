@@ -42,7 +42,7 @@ warm trustworthy healthcare product marketing
 premium fintech website with restrained typography
 developer tool website with product screenshots
 luxury ecommerce editorial product page
-calm productivity SaaS with airy spacing
+productivity SaaS with airy spacing
 Attio editorial SaaS typography
 Linear changelog dark developer tool
 ```

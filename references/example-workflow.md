@@ -35,11 +35,12 @@ Start with styles because this is a visual/brand task.
 editorial monochrome SaaS landing page
 premium data infrastructure website restrained typography
 developer tool website with product screenshots
-calm productivity SaaS with airy spacing
+productivity SaaS with airy spacing
 enterprise analytics product marketing
 ```
 
-Open 3-6 strong styles with `refero_get_styles`.
+Open 3-4 strong styles with `refero_get_styles`; full styles are large, so split larger
+research into multiple batches.
 
 ### Style Findings
 
@@ -47,7 +48,7 @@ Open 3-6 strong styles with `refero_get_styles`.
 |-----------|---------------------|---------------|
 | Style A: editorial monochrome SaaS | Strong typographic hierarchy, low color, confidence through restraint | Use a mostly neutral palette and crisp type scale |
 | Style B: data infrastructure website | Dense technical credibility, grid structure, product screenshot framing | Use structured comparison tables and screenshot panels |
-| Style C: calm productivity SaaS | Airy spacing, friendly trust, softer supporting sections | Add breathing room around plan cards and proof sections |
+| Style C: productivity SaaS | Airy spacing, friendly trust, softer supporting sections | Add breathing room around plan cards and proof sections |
 | Style D: premium fintech/product marketing | Subtle accent discipline, numbers presented with authority | Use exact ROI metrics and restrained accent color |
 
 ### Visual Direction Synthesis
@@ -57,13 +58,13 @@ Primary foundation: editorial monochrome SaaS.
 Borrowed details:
 
 - From data infrastructure: precise grid, compact comparison table, screenshot framing.
-- From calm productivity: more generous section spacing and softer proof blocks.
+- From productivity: more generous section spacing and softer proof blocks.
 - From premium fintech: accent color reserved for value proof and selected plan state.
 
 Resulting direction:
 
 ```text
-A calm, evidence-led pricing page: white canvas, deep charcoal text, compact editorial
+A precise, evidence-led pricing page: white canvas, deep charcoal text, compact sans-led
 headlines, thin rule lines, quiet plan cards, and exact operational metrics. Use one
 muted green accent for value proof and selected actions. Product screenshots should be
 framed as evidence, not decoration.

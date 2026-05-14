@@ -152,7 +152,7 @@ Recommended loop:
 2. Include one broad aesthetic query.
 3. Include one domain/category query.
 4. Include one known-brand or strong-product query when relevant.
-5. Retrieve 3-6 strong styles with `refero_get_styles`.
+5. Retrieve 3-4 strong styles with `refero_get_styles`; full styles are large, so split larger research into multiple batches.
 6. Compare what each style contributes.
 7. Choose one primary foundation and borrow 1-2 specific details from other styles.
 
@@ -164,7 +164,7 @@ Good style queries:
 - playful creator tool landing page with vivid accents
 - developer tool website with product screenshots
 - luxury ecommerce editorial product page
-- calm productivity SaaS with airy spacing
+- productivity SaaS with airy spacing
 - data infrastructure website dark technical style
 - Attio editorial SaaS typography
 - Linear changelog dark developer tool
@@ -270,7 +270,7 @@ For a quick visual improvement:
 For a new landing page, brand direction, or major redesign:
 
 - 3-5 style searches
-- 3-6 full styles
+- 3-4 full styles in one batch; use additional batches only when needed
 - screen research for concrete sections/components
 - clear visual direction before implementation
 
@@ -307,9 +307,9 @@ From styles:
 Output example:
 
 ```text
-Use a calm editorial SaaS foundation: white canvas, compact UI copy, restrained black
-primary actions, thin borders, and product screenshots in framed panels. Borrow warmer
-accent discipline from another reference, but keep color rare.
+Use a precise analytics SaaS foundation: white canvas, compact UI copy, restrained black
+primary actions, thin borders, and product screenshots in framed panels. Borrow disciplined
+accent use from another reference, but keep color rare.
 ```
 
 ### Product Pattern
@@ -394,6 +394,9 @@ Core craft rules:
 - Define tokens before implementation: type scale, colors, spacing, radius, shadows.
 - Use brand-appropriate colors from research. Do not default to indigo/violet unless the
   user explicitly asks for it.
+- Treat "calm editorial" as a current AI-slop risk. Do not default to oversized serif
+  hero type, italic display words, warm ivory/cream canvases, or olive/clay/terracotta
+  palettes unless research and product context justify them.
 - Avoid generic hero -> features grid -> pricing -> FAQ -> CTA unless research supports it.
 - Use real product evidence for copy, trust signals, objection handling, and section order.
 - Create at least one memorable detail: a visual move, interaction, layout choice, or copy
@@ -411,6 +414,7 @@ Before final delivery, confirm:
 - Did I use flows when the task had multiple steps?
 - Can I name which references influenced the design and why?
 - Does the implementation avoid generic AI design defaults?
+- Did I avoid the calm editorial serif + earth-tone default unless it was justified?
 - Does the result fit the user's product, audience, and constraints?
 
 If the answer is no, research or refine more before delivering.

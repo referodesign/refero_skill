@@ -42,7 +42,35 @@ Dark mode is a deliberate brand choice, not a default. When a brief says nothing
 
 ---
 
-## 🚨 THE #4 TELL: EMOJI AS ICONS
+## 🚨 THE #4 TELL: CALM EDITORIAL SERIF ON AUTOPILOT
+
+Newer models often avoid obvious indigo SaaS slop by switching to another safe template:
+warm ivory/cream background, oversized high-contrast serif headline, one italic serif
+word, muted olive/clay/terracotta accents, very airy spacing, and "calm editorial"
+positioning regardless of the product.
+
+This can be excellent for an editorial brand, cultural product, hospitality site, or
+fashion/lifestyle page. It becomes AI slop when applied by default to browsers, dev
+tools, enterprise SaaS, fintech, dashboards, or functional product UI without research.
+
+**RULE: Do not use the calm editorial serif + earth-tone pattern unless the product context
+and Refero research justify it.**
+
+Before using it, you must be able to explain:
+1. Why this product needs an editorial or literary voice.
+2. Why a serif display font communicates the brand better than a sans/system face.
+3. Why warm ivory, olive, clay, terracotta, or other earth tones fit the audience.
+4. Which references support this exact direction.
+
+If you cannot answer those, choose a sharper product-specific direction: technical,
+utilitarian, high-contrast, image-led, data-dense, playful, industrial, clinical,
+luxury, or another style grounded in research.
+
+Serif fonts and earthy palettes are not banned. Autopilot "calm editorial" is.
+
+---
+
+## 🚨 THE #5 TELL: EMOJI AS ICONS
 
 Standard emoji (😀🚀💡🎯) immediately signal "AI-generated." They're a shortcut that makes any design look cheap and unfinished.
 
@@ -52,7 +80,7 @@ Use instead: icon libraries (Lucide, Phosphor, Heroicons), Unicode symbols (→ 
 
 ---
 
-## 🚨 THE #5 TELL: LEFT ACCENT STRIPE
+## 🚨 THE #6 TELL: LEFT ACCENT STRIPE
 
 The colored vertical bar on the left edge of a card (`border-left: 4px solid <accent>`). AI models add it for "visual interest" — but in shipped products this stripe is reserved for elements that carry meaning: callouts, alerts, active list items, status, priority.
 
@@ -67,15 +95,18 @@ If you can't say in one word what the color means, remove the stripe.
 **Typography symptoms:**
 - Same font as every other AI site, same weight throughout
 - No distinction between display and body text
+- Oversized serif/italic hero type used only to feel "tasteful"
 - Missing letter-spacing on ALL CAPS and small text
 
 **Color symptoms:**
 - Default indigo/violet, gradients that don't serve function
+- Warm ivory + olive/clay/terracotta chosen because it feels safe, not because it fits
 - Perfectly even color distribution, no clear accent hierarchy
 
 **Layout symptoms:**
 - Perfectly symmetrical everything, cookie-cutter card grids
 - Hero with left text + right image (every landing page ever)
+- Calm editorial landing layout applied to products that need utility, speed, or proof
 - Centered everything with no visual tension
 
 **Visual symptoms:**
@@ -119,6 +150,8 @@ Before shipping any design:
 □ No decorative left/side accent stripes
 □ No standard emoji used as icons
 □ Color mode is light unless brief explicitly asks for dark
+□ Serif display / warm editorial treatment is justified by product context
+□ Earth-tone palette is research-backed, not a safe default
 □ ALL CAPS text has letter-spacing
 □ Would pass the "screenshot test" next to real products
 □ Font choices are intentional and contextual
@@ -144,6 +177,10 @@ Run these against your design before shipping:
 
 **Identity test:** If the first viewport could belong to any other company → branding is too weak. Add the one detail that makes this unmistakably THIS brand.
 
+**Editorial test:** If replacing the logo with a coffee shop, boutique hotel, or literary
+magazine still makes the hero feel plausible → the design is probably generic calm
+editorial slop. Make the visual language specific to the actual product.
+
 ---
 
 ## Safe vs. Intentional
@@ -152,10 +189,12 @@ Safe (forgettable):
 - 3-column pricing because "everyone does it"
 - Hero with left text + right image because "it works"
 - Card grid with equal spacing because "it's clean"
+- Cream background + serif headline + olive accent because it feels tasteful
 
 Intentional (memorable):
 - 2-column pricing because your product only has 2 tiers
 - Full-width hero image with overlay because it fits the brand
 - Asymmetrical layout because you want visual tension
+- Serif editorial system because the product is actually publishing, culture, fashion, hospitality, or another content-led brand
 
 "I chose this because [specific reason for THIS project]" beats "I chose this because everyone does it."
