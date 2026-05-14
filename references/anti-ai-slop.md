@@ -113,6 +113,29 @@ be softened into average AI taste.
 
 ---
 
+## 🚨 THE #8 TELL: TOKEN ROLE DRIFT
+
+Another failure mode: the agent uses real style tokens but changes what they mean. A
+source says "acid yellow only for primary CTA," then the design uses it as a section
+background. A source says "syntax colors only inside code snippets," then those colors
+become UI accents. A source says "pastels are decorative atmosphere," then they become
+cards and controls.
+
+**RULE: A token's role is part of the token. Preserve it or do not use it.**
+
+Red flags:
+- CTA-only accents used as backgrounds, borders, badges, or decorative fills.
+- Code syntax colors used outside code windows.
+- Decorative gradients/pastels turned into core UI surfaces.
+- Source button radius or shadow recipes changed to feel safer.
+- Component treatments mixed without preserving their source states.
+
+When combining references, assign each source a bounded job and respect its rules. One
+source can own canvas/type, another can own code-window treatment, another can own primary
+CTA. The result becomes unique through composition, not by changing the meaning of tokens.
+
+---
+
 ## What Makes Design Look Generic
 
 **Typography symptoms:**
@@ -125,6 +148,7 @@ be softened into average AI taste.
 - Default indigo/violet, gradients that don't serve function
 - Warm ivory + olive/clay/terracotta chosen because it feels safe, not because it fits
 - Distinctive reference colors muted into the same safe earth-tone palette
+- Source colors used outside their stated role
 - Perfectly even color distribution, no clear accent hierarchy
 
 **Layout symptoms:**
@@ -178,6 +202,7 @@ Before shipping any design:
 □ Serif display / warm editorial treatment is justified by product context
 □ Earth-tone palette is research-backed, not a safe default
 □ Strong reference traits were preserved, not averaged away
+□ Source token/component roles were preserved
 □ ALL CAPS text has letter-spacing
 □ Would pass the "screenshot test" next to real products
 □ Font choices are intentional and contextual

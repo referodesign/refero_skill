@@ -68,6 +68,8 @@ Primary reference/direction: data infrastructure website.
 Preserve: precise grid, compact comparison table, screenshot framing, sans-led UI,
 technical confidence, restrained neutral canvas.
 Borrow only: editorial type hierarchy, productivity spacing, fintech proof treatment.
+Role rules: green proof accent only for selected state/value proof; product screenshot
+frames only for evidence; cards use pricing-screen interaction rules, not decoration.
 Reject: cream editorial canvas, serif hero, muted clay/orange accent, decorative cards.
 Token commitments: white/charcoal/cool-neutral canvas, sans typography, green proof
 accent, 8px max radius, thin borders, product screenshots as evidence.
@@ -177,14 +179,14 @@ Journey logic:
 
 ### Design Decision Ledger
 
-| Area | Decision | Source | Why |
-|------|----------|--------|-----|
-| Palette | White, charcoal, cool neutrals, muted green accent | Style B + fintech reference + brief | Trustworthy and precise; avoids generic blue/purple SaaS |
-| Typography | Sans-led hierarchy, tight headings, readable 15-16px body | Style B + Style A hierarchy | Premium without becoming decorative or literary |
-| Cards | Thin borders, subtle selected state, no heavy shadows | Pricing screens + anti-slop card rule | Keeps evaluation calm and scannable |
-| CTA hierarchy | Pro trial primary, Enterprise sales secondary | Pricing screens + buyer journey | Supports self-serve and sales-led paths |
-| Proof | ROI metrics near pricing, security near Enterprise | Screen research + buyer objections | Answers buyer objections where they appear |
-| Memorable detail | "Operational value" strip showing saved hours/cost by plan | Brief + analytics product context | Makes pricing feel tied to outcome |
+| Area | Decision | Source | Source rule / role | Why |
+|------|----------|--------|--------------------|-----|
+| Palette | White, charcoal, cool neutrals, muted green accent | Style B + fintech reference + brief | Accent only for value proof and selected actions | Trustworthy and precise; avoids generic blue/purple SaaS |
+| Typography | Sans-led hierarchy, tight headings, readable 15-16px body | Style B + Style A hierarchy | Use hierarchy, not decorative serif voice | Premium without becoming decorative or literary |
+| Cards | Thin borders, subtle selected state, no heavy shadows | Pricing screens + anti-slop card rule | Cards only for plan comparison and interaction | Keeps evaluation calm and scannable |
+| CTA hierarchy | Pro trial primary, Enterprise sales secondary | Pricing screens + buyer journey | Primary treatment only for self-serve action | Supports self-serve and sales-led paths |
+| Proof | ROI metrics near pricing, security near Enterprise | Screen research + buyer objections | Proof modules near the decision they support | Answers buyer objections where they appear |
+| Memorable detail | "Operational value" strip showing saved hours/cost by plan | Brief + analytics product context | Metric strip as evidence, not decoration | Makes pricing feel tied to outcome |
 
 ---
 

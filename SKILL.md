@@ -33,6 +33,8 @@ patterns from screens, and sequencing from flows when the task has multiple step
 - **Do not average references into a safe middle.** When references conflict, choose one
   dominant direction and preserve its sharp traits. Secondary references may add narrow
   details only.
+- **Do not change token meanings.** If a reference says a color, font, radius, shadow,
+  gradient, or component is for a specific role, use it only for that role or omit it.
 - **Do not use generic frontend/product design skills as a parallel design authority**
   when this skill is available. Refero is the design methodology; generic design skills
   tend to pull work back toward generic AI design.
@@ -207,14 +209,21 @@ Before implementation, create a reference lock:
 Primary reference/direction: [one dominant source]
 Preserve: [3-5 traits that must survive: canvas, type, accent, layout, density, media]
 Borrow only: [1-2 specific secondary details]
+Role rules: [source token/component meanings to preserve, e.g. CTA-only, code-only, decorative-only]
 Reject: [defaults/averages that would collapse the direction]
-Token commitments: [background, type, accent, radius, border/shadow, imagery treatment]
+Token commitments: [background, type, accent, radius, border/shadow, imagery treatment, with roles]
 ```
 
 If implementation drifts from the lock, stop and correct it. Do not soften distinctive
 traits into safer colors, safer fonts, softer radius, or generic section layouts.
 Reference lock is not cloning; it preserves selected traits while adapting content,
 brand, and interaction details to the user's product.
+
+When combining styles, assign each source a bounded job. For example: one source may own
+canvas/type, another may own code-window treatment, and another may own primary CTA.
+Never move a token outside its source role: CTA colors stay CTA-only, syntax colors stay
+inside code, decorative gradients stay decorative, and card/button rules keep their
+specified radius, shadow, and state behavior.
 
 ### 2. Research Screens For Product Details
 
@@ -404,9 +413,9 @@ Recommendation:
 
 Before implementation, convert research into a short decision ledger:
 
-| Decision | Source | Why |
-|----------|--------|-----|
-| [palette/type/layout/content choice] | [style/screen/flow/user constraint/craft rule] | [specific rationale] |
+| Decision | Source | Source rule / role | Why |
+|----------|--------|--------------------|-----|
+| [palette/type/layout/content choice] | [style/screen/flow/user constraint/craft rule] | [token/component role to preserve] | [specific rationale] |
 
 If a major choice has no source, do not ship it as a design decision. Either research
 more, tie it to the user's constraints, or remove it.
@@ -428,6 +437,8 @@ Core craft rules:
 
 - Define tokens before implementation: type scale, colors, spacing, radius, shadows.
 - Preserve the primary reference's strongest traits instead of normalizing them.
+- Preserve token roles from references. Do not turn a CTA accent into a background, a
+  code-only color into UI chrome, or a decorative gradient into an interface surface.
 - Use brand-appropriate colors from research. Do not default to indigo/violet unless the
   user explicitly asks for it.
 - Treat "calm editorial" as a current AI-slop risk. Do not default to oversized serif
@@ -448,6 +459,7 @@ Before final delivery, confirm:
 - Did I synthesize multiple references into a unique direction?
 - Did I avoid averaging references into a safe centroid?
 - Did I preserve the primary reference's signature traits?
+- Did I preserve source token/component roles instead of repurposing them?
 - Did I use screens when concrete UI patterns were needed?
 - Did I use flows when the task had multiple steps?
 - Can I name which references influenced the design and why?
