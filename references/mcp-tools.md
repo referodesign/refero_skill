@@ -172,7 +172,7 @@ Parameters:
 | `screen_id` | string | Yes | UUID from `refero_search_screens` or `refero_get_screen`. |
 | `limit` | number | No | Number of similar screens. Default is usually 10; max is usually 20. |
 
-### `refero_get_screen_content`
+### `refero_get_screen_image`
 
 Get raw screenshot image content by UUID.
 
@@ -184,6 +184,7 @@ Parameters:
 | Parameter | Type | Required | Notes |
 |-----------|------|----------|-------|
 | `screen_id` | string | Yes | UUID from `refero_search_screens` or `refero_get_screen`. |
+| `image_size` | enum | No | `thumbnail` or `full`. Default: `thumbnail`. |
 
 ## Flows
 
@@ -239,7 +240,7 @@ tool schema shown by your client includes it:
 
 - Do not use old `_tool` suffixed names.
 - Do not call `get_design_guidance`; use styles/screens/flows research instead.
-- Do not pass `image_size` to `refero_get_screen`; use `refero_get_screen_content` for raw images.
+- Do not pass `image_size` to `refero_get_screen`; use `refero_get_screen_image` for raw images.
 - Do not pass `include_similar` to `refero_get_screen`; use `refero_get_similar_screens`.
 - Do not use screens as the main source for visual taste when styles are available.
 - Do not assume styles include dashboards, auth screens, or iOS app screens as style systems.

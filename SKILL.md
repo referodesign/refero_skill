@@ -132,7 +132,7 @@ After finding strong screens:
 
 - use `refero_get_screen` for full details
 - use `refero_get_similar_screens` to expand from a strong example
-- use `refero_get_screen_content` only when raw screenshot inspection is needed
+- use `refero_get_screen_image` only when raw screenshot inspection is needed
 
 ### Use Flows For Journeys
 
