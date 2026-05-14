@@ -162,16 +162,16 @@ Journey logic:
 - Enterprise route asks only for essential qualification fields.
 ```
 
-### Design Decisions
+### Design Decision Ledger
 
-| Area | Decision | Why |
-|------|----------|-----|
-| Palette | White, charcoal, cool neutrals, muted green accent | Trustworthy and precise; avoids generic blue/purple SaaS |
-| Typography | Editorial sans, tight headings, readable 15-16px body | Premium without becoming decorative |
-| Cards | Thin borders, subtle selected state, no heavy shadows | Keeps evaluation calm and scannable |
-| CTA hierarchy | Pro trial primary, Enterprise sales secondary | Supports self-serve and sales-led paths |
-| Proof | ROI metrics near pricing, security near Enterprise | Answers buyer objections where they appear |
-| Memorable detail | "Operational value" strip showing saved hours/cost by plan | Makes pricing feel tied to outcome |
+| Area | Decision | Source | Why |
+|------|----------|--------|-----|
+| Palette | White, charcoal, cool neutrals, muted green accent | Style A + fintech reference + brief | Trustworthy and precise; avoids generic blue/purple SaaS |
+| Typography | Editorial sans, tight headings, readable 15-16px body | Style A + product context | Premium without becoming decorative or literary |
+| Cards | Thin borders, subtle selected state, no heavy shadows | Pricing screens + anti-slop card rule | Keeps evaluation calm and scannable |
+| CTA hierarchy | Pro trial primary, Enterprise sales secondary | Pricing screens + buyer journey | Supports self-serve and sales-led paths |
+| Proof | ROI metrics near pricing, security near Enterprise | Screen research + buyer objections | Answers buyer objections where they appear |
+| Memorable detail | "Operational value" strip showing saved hours/cost by plan | Brief + analytics product context | Makes pricing feel tied to outcome |
 
 ---
 

@@ -35,6 +35,10 @@ patterns from screens, and sequencing from flows when the task has multiple step
   tend to pull work back toward generic AI design.
 - **Research output must be specific.** Name the references, describe concrete choices,
   and explain what will be adapted.
+- **No design from vibe memory.** Every major visual, layout, content, or interaction
+  decision must trace to Refero research, the user's brief, or a craft reference.
+- **Synthesize before implementation.** Turn research into a concept, token direction,
+  and concrete decision ledger before drawing or coding.
 
 ## MCP Setup
 
@@ -376,6 +380,15 @@ Recommendation:
 - [what to design and why]
 ```
 
+Before implementation, convert research into a short decision ledger:
+
+| Decision | Source | Why |
+|----------|--------|-----|
+| [palette/type/layout/content choice] | [style/screen/flow/user constraint/craft rule] | [specific rationale] |
+
+If a major choice has no source, do not ship it as a design decision. Either research
+more, tie it to the user's constraints, or remove it.
+
 ## Design Craft
 
 After research, execute like a senior product designer. Use the bundled references only
@@ -413,6 +426,8 @@ Before final delivery, confirm:
 - Did I use screens when concrete UI patterns were needed?
 - Did I use flows when the task had multiple steps?
 - Can I name which references influenced the design and why?
+- Can every major design choice be traced to a reference, user constraint, or craft rule?
+- Did I produce a concept and decision ledger before implementation?
 - Does the implementation avoid generic AI design defaults?
 - Did I avoid the calm editorial serif + earth-tone default unless it was justified?
 - Does the result fit the user's product, audience, and constraints?
