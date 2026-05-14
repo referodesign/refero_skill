@@ -1,146 +1,250 @@
 # Refero MCP Tools Reference
 
-Refero MCP has 5 tools. Tool names use `refero_*_tool` format (e.g., `refero_search_screens_tool`).
+MCP clients may namespace tool names, but the Refero tools are exposed with the
+`refero_` prefix. Use the exact tool names shown by the client.
 
-## `refero_search_screens_tool` — Visual Exploration
+Refero has three research layers:
 
-**Best for:** Single screens, specific UI patterns, visual inspiration.
+1. Styles - visual direction and taste.
+2. Screens - concrete UI patterns and product-screen decisions.
+3. Flows - multi-step journey logic.
 
-**Parameters:**
-- `query` — semantic search (required)
-- `platform` — `"ios"` | `"web"` (required)
+## Styles
 
-**Query examples (simple):**
-```
-"pricing page"
-"forgot password"  
-"skeleton loading"
-"data table with filters"
-"headspace subscription"
-```
+### `refero_search_styles`
 
-**Query examples (complex — combine freely):**
-```
-"iOS paywall modal with annual/monthly toggle and dark mode"
-"onboarding welcome screen with illustration and progress indicator"
-"error state for email input with inline validation message"
-"product analytics dashboard with activity heatmap"
-```
+Search curated design styles using semantic search.
 
-**Pro tips:**
-- Use `platform: "ios"` or `platform: "web"` for focused results
-- Start broad, then narrow: `"onboarding"` → `"fintech onboarding"` → `"KYC verification"`
-- Mix query types: screen type + company + style = `"Notion settings dark mode"`
+Use first for any task with visual direction, brand feel, typography, color, spacing,
+imagery, art direction, design-system inspiration, or visual polish.
 
----
+What results contain:
 
-## `refero_search_flows_tool` — Journey Understanding
+- style UUID
+- title
+- source URL
+- preview image URL
+- platform
+- rich natural-language description of the visual language
 
-**Best for:** Multi-step processes, user journeys, flow logic.
+Parameters:
 
-**Parameters:**
-- `query` — semantic search (required)
-- `platform` — `"ios"` | `"web"` (required)
+| Parameter | Type | Required | Notes |
+|-----------|------|----------|-------|
+| `query` | string | Yes | Semantic query for aesthetic, domain, audience, category, or brand direction. |
+| `page` | number | No | Pagination. Use later pages to explore less obvious directions. |
 
-**Query examples:**
-```
-"signing up"
-"onboarding airbnb"
-"canceling subscription"
-"checkout flow with promo code"
-"password reset flow with 2FA"
+Good queries:
+
+```text
+editorial monochrome SaaS landing page
+warm trustworthy healthcare product marketing
+premium fintech website with restrained typography
+developer tool website with product screenshots
+luxury ecommerce editorial product page
+calm productivity SaaS with airy spacing
+Attio editorial SaaS typography
+Linear changelog dark developer tool
 ```
 
-**When to use flows vs screens:**
-- **Screens** when you need visual inspiration for a single screen
-- **Flows** when you need to understand the full journey (onboarding, checkout, etc.)
+Search method:
 
----
+- Search 3-5 different visual angles.
+- Include one broad aesthetic query.
+- Include one domain/category query.
+- Include one known-brand or strong-product query when relevant.
+- Do not stop at the first good result.
 
-## `refero_get_screen_tool` — Deep Dive on Specific Screen
+Current coverage:
 
-**Best for:** Detailed analysis after finding promising examples in search.
+- Styles currently focus on web marketing/product pages: landing pages, pricing pages,
+  product marketing sites, editorial brand sites, and SaaS websites.
+- Styles do not currently cover in-app dashboards, auth screens, settings screens, or iOS
+  app screens as style systems.
+- Even for product UI, use styles to establish taste and visual language, then use
+  screens/flows for product-specific logic.
 
-**Parameters:**
-- `screen_id` — ID from search results (required)
+### `refero_get_styles`
 
-**Optional parameters:**
+Retrieve full design style references for one or more style UUIDs.
 
-**`image_size`** — choose wisely:
-| Value | When to use | Size |
-|-------|-------------|------|
-| `"none"` | Default. Text descriptions are usually enough | 0 KB |
-| `"thumbnail"` | Need to visually evaluate layout | ~30-100 KB |
-| `"full"` | Need fine UI details (icons, typography, exact spacing) | ~400KB-2MB |
+Use after `refero_search_styles` to turn promising style previews into actionable design
+material.
 
-**`include_similar: true`** — get similar screens from other apps.
+What results may include:
 
-**`similar_limit`** — how many similar screens (default: 4, max: 20)
+- visual thesis / north star
+- colors and usage roles
+- typography and type scale
+- spacing, radius, shadows, surfaces
+- component treatments
+- layout guidance
+- imagery or product screenshot treatment
+- do/don't rules
+- agent prompt guidance or implementation notes
 
----
+Parameters:
 
-## `refero_get_flow_tool` — Complete Journey Analysis
+| Parameter | Type | Required | Notes |
+|-----------|------|----------|-------|
+| `style_id` | string[] | Yes | One or more style UUIDs from `refero_search_styles`. Retrieve several strong styles when exploring visual direction. |
 
-**Best for:** Understanding end-to-end user experience after finding a flow in search.
+How to use returned styles:
 
-**Parameters:**
-- `flow_id` — ID from search results (required)
+- Treat each style as a reference ingredient, not a template.
+- Pick one primary foundation for mood and density.
+- Borrow 1-2 specific details from other styles.
+- Translate everything to the user's product, audience, and constraints.
 
-**Note:** Does NOT support `image_size` parameter. Returns text descriptions only.
+## Screens
 
-Returns:
-- All screens with full descriptions
-- For each step: goal, action, system response
-- User problem description
-- Related search queries
+### `refero_search_screens`
 
----
+Search real UI screens using semantic search.
 
-## `refero_get_design_guidance_tool` — AI-Powered Best Practices
+Use for concrete interface decisions: page structure, component choices, content
+hierarchy, copy, states, and product-specific patterns.
 
-**Best for:** When you're stuck, starting fresh, or need a "second opinion." Takes ~15-30 seconds.
+Parameters:
 
-**How it works:**
-1. You give context (queries) and ask a question.
-2. The server analyzes hundreds of screens.
-3. It returns a structured guide: what's standard, what's unique, and what to avoid.
+| Parameter | Type | Required | Notes |
+|-----------|------|----------|-------|
+| `query` | string | Yes | Search by screen type, UI element, pattern, state, company, or on-screen text. |
+| `platform` | enum | Yes | `web` for web app/site patterns, `ios` for mobile app patterns. |
+| `page` | number | No | Pagination. Use later pages to explore beyond obvious results. |
 
-**Example:**
+Good queries:
+
+```text
+pricing page annual monthly toggle
+feature comparison table
+dashboard empty state
+billing settings cancellation modal
+onboarding progress indicator
+2FA setup recovery codes
+data table filters
+destructive action confirmation
 ```
-queries: [
-  "paywall",
-  "subscription pricing screen", 
-  "premium upgrade modal",
-  "free trial"
-]
-question: "How to create a converting paywall for a photo app?"
+
+Search guidance:
+
+- Search by what is literally on the screen.
+- Prefer concrete UI terminology over broad aesthetic words.
+- If the main query is aesthetic ("premium", "minimalist", "editorial", "dark"), search
+  styles first.
+- Use `page` for search pagination. Do not pass `limit`, `image_size`, or
+  `include_similar` to search tools.
+
+### `refero_get_screen`
+
+Get full details for one or more screens by UUID.
+
+Use after `refero_search_screens` when a result looks relevant and you need deeper
+metadata, descriptions, app/site info, patterns, elements, fonts, or content structure.
+
+Parameters:
+
+| Parameter | Type | Required | Notes |
+|-----------|------|----------|-------|
+| `screen_id` | string | Yes* | One screen UUID. Use exactly one of `screen_id` or `screen_ids`. |
+| `screen_ids` | string[] | Yes* | Multiple screen UUIDs. Use exactly one of `screen_id` or `screen_ids`. |
+
+Batching:
+
+- Retrieve a few strong screens at a time.
+- If a batch fails, retry with fewer IDs.
+
+### `refero_get_similar_screens`
+
+Get visually and functionally similar screens for a screen UUID.
+
+Use when one screen is especially relevant and you want comparable examples fast.
+
+Parameters:
+
+| Parameter | Type | Required | Notes |
+|-----------|------|----------|-------|
+| `screen_id` | string | Yes | UUID from `refero_search_screens` or `refero_get_screen`. |
+| `limit` | number | No | Number of similar screens. Default is usually 10; max is usually 20. |
+
+### `refero_get_screen_content`
+
+Get raw screenshot image content by UUID.
+
+Use only when text metadata is not enough and you need to visually inspect the exact
+screenshot. This returns image content and can use more context than text tools.
+
+Parameters:
+
+| Parameter | Type | Required | Notes |
+|-----------|------|----------|-------|
+| `screen_id` | string | Yes | UUID from `refero_search_screens` or `refero_get_screen`. |
+
+## Flows
+
+### `refero_search_flows`
+
+Search user flows: connected screens showing how a user completes a task.
+
+Use for journey logic: onboarding, checkout, signup, cancellation, upgrade, settings,
+account deletion, password reset, and other before/after sequences.
+
+Parameters:
+
+| Parameter | Type | Required | Notes |
+|-----------|------|----------|-------|
+| `query` | string | Yes | Search by task, journey, company, industry, or key step. |
+| `platform` | enum | Yes | `web` for web app/site flows, `ios` for mobile app flows. |
+| `page` | number | No | Pagination. Use later pages to explore more examples. |
+
+Good queries:
+
+```text
+signup onboarding
+checkout with promo code
+subscription cancellation
+account deletion feedback
+password reset 2FA
+workspace billing upgrade
 ```
 
-**Response includes:**
-- **must_do** — required elements (conventions, requirements)
-- **consider** — ideas for uniqueness (who does it, why it works)
-- **avoid** — anti-patterns (what to avoid and why)
-- **examples** — specific screens to study
+### `refero_get_flow`
 
----
+Get full details for one or more user flows.
 
-## Tips for Better Results
+Use after `refero_search_flows` to understand step-by-step goals, actions, system
+responses, screens, user problem, and related search queries.
 
-**Query formulation:**
-- If 0 results → broaden query, remove specific words
-- Too many irrelevant results → add context (platform, company, style)
-- Combine multiple aspects: `"fintech onboarding ios"` vs just `"onboarding"`
+Parameters:
 
-**Efficiency:**
-- Text descriptions from `get_flow` and `get_screen` are usually sufficient
-- Use `image_size` only for `get_screen` when visuals needed
-- Use `include_similar: true` to discover related approaches
+| Parameter | Type | Required | Notes |
+|-----------|------|----------|-------|
+| `flow_id` | number | Yes* | Numeric flow ID. Use exactly one of `flow_id` or `flow_ids`. |
+| `flow_ids` | number[] | Yes* | Multiple numeric flow IDs. Use exactly one of `flow_id` or `flow_ids`. |
 
-**Platform filter:**
-- `platform: "ios"` — required for mobile app patterns
-- `platform: "web"` — required for web app/site patterns
+## Response Formats
 
-**Common errors:**
-- Missing `platform` → add `platform: "ios"` or `platform: "web"`
-- `image_size` on `get_flow` → not supported, remove parameter
-- `limit`/`num_results` on search → not supported, pagination handled automatically
+Some clients expose a `response_format` parameter on Refero tools. Use it only when the
+tool schema shown by your client includes it:
+
+- `md` / markdown for human-readable research notes.
+- `json` for structured comparison or when extracting fields programmatically.
+
+## Common Mistakes
+
+- Do not use old `_tool` suffixed names.
+- Do not call `get_design_guidance`; use styles/screens/flows research instead.
+- Do not pass `image_size` to `refero_get_screen`; use `refero_get_screen_content` for raw images.
+- Do not pass `include_similar` to `refero_get_screen`; use `refero_get_similar_screens`.
+- Do not use screens as the main source for visual taste when styles are available.
+- Do not assume styles include dashboards, auth screens, or iOS app screens as style systems.
+- Do not copy a single style directly.
+
+## If Results Are Weak
+
+- Broaden the query.
+- Remove extra adjectives or constraints.
+- Search adjacent categories.
+- Try a known-product or best-brand query.
+- Inspect later pages.
+- For sparse flows, search related screens and reconstruct the journey manually.

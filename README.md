@@ -2,14 +2,14 @@
 
 # Refero Skill
 
-An agent skill that gives your AI access to 150,000+ real app screens and 6,000+ user flows from Stripe, Linear, Notion, Figma, and the best-designed products ever built — plus craft knowledge on typography, color, and copywriting. Your agent researches real references before designing, not training data averages.
+An agent skill that gives your AI a research-first design workflow powered by Refero MCP: curated visual styles, 150,000+ real app screens, and 6,000+ user flows from Stripe, Linear, Notion, Figma, and the best-designed products ever built — plus craft knowledge on typography, color, and copywriting. Your agent researches real references before designing, not training data averages.
 
 ## Install
 
 Works with Claude Code, Cursor, Gemini CLI, Lovable, and any MCP-compatible agent.
 
 ```bash
-npx skills add referodesign/refero_skill
+npx skills add https://github.com/referodesign/refero_skill --skill refero-design
 ```
 
 Craft knowledge loads immediately. No account required.
@@ -29,7 +29,7 @@ On Claude.ai, add the contents of `SKILL.md` to your project knowledge.
 
 ## What it does
 
-1. **Searches real products** — finds relevant screens and user flows across 150,000+ products from Stripe, Linear, Notion, Figma, and thousands more. Every result includes metadata on components, typography, colors, and layout — not just images. _(Requires [Refero Pro](#unlock-live-design-research))_
+1. **Researches styles, screens, and flows** — starts with curated visual styles for taste and direction, then uses real screens and user flows for product patterns and journey logic. _(Requires [Refero Pro](#unlock-live-design-research))_
 2. **Extracts patterns** — identifies specific design decisions and builds a reference list before touching code.
 3. **Applies craft knowledge** — uses built-in guides on typography, color, spacing, motion, icons, and copywriting. Flags anti-slop patterns before they appear.
 4. **Designs with evidence** — every decision traces back to a real product or a craft rule, not a training data average.
@@ -37,7 +37,7 @@ On Claude.ai, add the contents of `SKILL.md` to your project knowledge.
 <details>
 <summary>Files</summary>
 
-`SKILL.md` — Research-First methodology: discovery questions, research strategies, analysis frameworks, quality gates.
+`SKILL.md` — Research-first methodology: styles-first visual research, screen/flow routing, synthesis, craft guidance, quality gates.
 
 Reference guides: `typography.md`, `color.md`, `motion.md`, `icons.md`, `craft-details.md`, `anti-ai-slop.md`, `copywriting.md`, `mcp-tools.md`, `example-workflow.md`
 
