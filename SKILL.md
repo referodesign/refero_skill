@@ -30,6 +30,9 @@ patterns from screens, and sequencing from flows when the task has multiple step
   `refero_search_styles`.
 - **Do not copy one reference.** Study several strong references and synthesize a new
   direction for the user's product.
+- **Do not average references into a safe middle.** When references conflict, choose one
+  dominant direction and preserve its sharp traits. Secondary references may add narrow
+  details only.
 - **Do not use generic frontend/product design skills as a parallel design authority**
   when this skill is available. Refero is the design methodology; generic design skills
   tend to pull work back toward generic AI design.
@@ -159,6 +162,7 @@ Recommended loop:
 5. Retrieve 3-4 strong styles with `refero_get_styles`; full styles are large, so split larger research into multiple batches.
 6. Compare what each style contributes.
 7. Choose one primary foundation and borrow 1-2 specific details from other styles.
+8. Lock the primary reference's signature traits before implementation.
 
 Good style queries:
 
@@ -191,9 +195,26 @@ Synthesis rule:
 - Primary style: overall mood, density, and structure.
 - Secondary styles: specific borrowed details.
 - User context: adapt everything to the product, audience, and task.
+- Do not use the average/intersection of all references. If one reference is dark, one is
+  acid, and one is serif, the answer is not warm cream + muted orange + polite serif.
 
 Never present the result as "copying X". Present it as a new direction inspired by
 several references.
+
+Before implementation, create a reference lock:
+
+```text
+Primary reference/direction: [one dominant source]
+Preserve: [3-5 traits that must survive: canvas, type, accent, layout, density, media]
+Borrow only: [1-2 specific secondary details]
+Reject: [defaults/averages that would collapse the direction]
+Token commitments: [background, type, accent, radius, border/shadow, imagery treatment]
+```
+
+If implementation drifts from the lock, stop and correct it. Do not soften distinctive
+traits into safer colors, safer fonts, softer radius, or generic section layouts.
+Reference lock is not cloning; it preserves selected traits while adapting content,
+brand, and interaction details to the user's product.
 
 ### 2. Research Screens For Product Details
 
@@ -367,6 +388,7 @@ Research summary:
 
 Visual direction:
 - [primary style foundation]
+- [reference lock / signature traits to preserve]
 - [borrowed detail 1]
 - [borrowed detail 2]
 
@@ -405,6 +427,7 @@ when relevant; do not load every file by default.
 Core craft rules:
 
 - Define tokens before implementation: type scale, colors, spacing, radius, shadows.
+- Preserve the primary reference's strongest traits instead of normalizing them.
 - Use brand-appropriate colors from research. Do not default to indigo/violet unless the
   user explicitly asks for it.
 - Treat "calm editorial" as a current AI-slop risk. Do not default to oversized serif
@@ -423,6 +446,8 @@ Before final delivery, confirm:
 - Did I use styles for visual taste?
 - Did I avoid copying one style directly?
 - Did I synthesize multiple references into a unique direction?
+- Did I avoid averaging references into a safe centroid?
+- Did I preserve the primary reference's signature traits?
 - Did I use screens when concrete UI patterns were needed?
 - Did I use flows when the task had multiple steps?
 - Can I name which references influenced the design and why?

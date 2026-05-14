@@ -90,6 +90,29 @@ If you can't say in one word what the color means, remove the stripe.
 
 ---
 
+## 🚨 THE #7 TELL: REFERENCE AVERAGING
+
+AI models often do real research, then destroy it by averaging strong references into the
+safest middle point. This is how a dark workbench, acid-yellow document site, saturated
+orange product brand, and serif editorial page become the same warm cream canvas with
+muted clay accents.
+
+**RULE: Synthesis means choosing and adapting, not finding the least risky intersection.**
+
+Red flags:
+- Dark canvases become cream.
+- Acid or saturated accents become muted clay/olive.
+- Geometric sans systems become polite serif headlines.
+- Sharp/zero-radius UI becomes soft rounded cards.
+- Distinctive media or layout becomes generic hero + sections.
+
+When references conflict, choose one primary direction and preserve its signature traits.
+Secondary references may contribute 1-2 specific details, but they must not dilute the
+primary direction. A bold reference should either stay bold or be rejected; it should not
+be softened into average AI taste.
+
+---
+
 ## What Makes Design Look Generic
 
 **Typography symptoms:**
@@ -101,12 +124,14 @@ If you can't say in one word what the color means, remove the stripe.
 **Color symptoms:**
 - Default indigo/violet, gradients that don't serve function
 - Warm ivory + olive/clay/terracotta chosen because it feels safe, not because it fits
+- Distinctive reference colors muted into the same safe earth-tone palette
 - Perfectly even color distribution, no clear accent hierarchy
 
 **Layout symptoms:**
 - Perfectly symmetrical everything, cookie-cutter card grids
 - Hero with left text + right image (every landing page ever)
 - Calm editorial landing layout applied to products that need utility, speed, or proof
+- Signature reference layouts collapsed into generic section stacks
 - Centered everything with no visual tension
 
 **Visual symptoms:**
@@ -152,6 +177,7 @@ Before shipping any design:
 □ Color mode is light unless brief explicitly asks for dark
 □ Serif display / warm editorial treatment is justified by product context
 □ Earth-tone palette is research-backed, not a safe default
+□ Strong reference traits were preserved, not averaged away
 □ ALL CAPS text has letter-spacing
 □ Would pass the "screenshot test" next to real products
 □ Font choices are intentional and contextual

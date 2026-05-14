@@ -53,13 +53,25 @@ research into multiple batches.
 
 ### Visual Direction Synthesis
 
-Primary foundation: editorial monochrome SaaS.
+Primary foundation: data infrastructure website.
 
 Borrowed details:
 
-- From data infrastructure: precise grid, compact comparison table, screenshot framing.
+- From editorial SaaS: tighter type hierarchy and low color discipline.
 - From productivity: more generous section spacing and softer proof blocks.
 - From premium fintech: accent color reserved for value proof and selected plan state.
+
+Reference lock:
+
+```text
+Primary reference/direction: data infrastructure website.
+Preserve: precise grid, compact comparison table, screenshot framing, sans-led UI,
+technical confidence, restrained neutral canvas.
+Borrow only: editorial type hierarchy, productivity spacing, fintech proof treatment.
+Reject: cream editorial canvas, serif hero, muted clay/orange accent, decorative cards.
+Token commitments: white/charcoal/cool-neutral canvas, sans typography, green proof
+accent, 8px max radius, thin borders, product screenshots as evidence.
+```
 
 Resulting direction:
 
@@ -146,8 +158,9 @@ Research summary:
 - Flows reviewed: upgrade, checkout, sales contact.
 
 Visual direction:
-- Primary foundation: editorial monochrome SaaS.
-- Borrowed detail 1: data-infrastructure grid and screenshot framing.
+- Primary foundation: data infrastructure website.
+- Reference lock: precise grid, compact comparison, sans-led UI, product evidence.
+- Borrowed detail 1: editorial type hierarchy and low color discipline.
 - Borrowed detail 2: fintech-style precision around numbers and proof.
 
 Product patterns:
@@ -166,8 +179,8 @@ Journey logic:
 
 | Area | Decision | Source | Why |
 |------|----------|--------|-----|
-| Palette | White, charcoal, cool neutrals, muted green accent | Style A + fintech reference + brief | Trustworthy and precise; avoids generic blue/purple SaaS |
-| Typography | Editorial sans, tight headings, readable 15-16px body | Style A + product context | Premium without becoming decorative or literary |
+| Palette | White, charcoal, cool neutrals, muted green accent | Style B + fintech reference + brief | Trustworthy and precise; avoids generic blue/purple SaaS |
+| Typography | Sans-led hierarchy, tight headings, readable 15-16px body | Style B + Style A hierarchy | Premium without becoming decorative or literary |
 | Cards | Thin borders, subtle selected state, no heavy shadows | Pricing screens + anti-slop card rule | Keeps evaluation calm and scannable |
 | CTA hierarchy | Pro trial primary, Enterprise sales secondary | Pricing screens + buyer journey | Supports self-serve and sales-led paths |
 | Proof | ROI metrics near pricing, security near Enterprise | Screen research + buyer objections | Answers buyer objections where they appear |
