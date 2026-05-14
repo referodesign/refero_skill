@@ -80,7 +80,7 @@ What results may include:
 - layout guidance, section rhythm, and composition patterns
 - spacing, radius, shadows, elevation, surfaces
 - component treatments and sometimes component/code examples
-- imagery or product screenshot treatment
+- imagery, graphics, illustration, or product screenshot treatment
 - do/don't rules
 - agent prompt guidance or implementation notes
 
@@ -99,6 +99,8 @@ How to use returned styles:
 - Borrow 1-2 specific details from other styles.
 - Extract layout, component, spacing, and elevation rules, not only colors and fonts.
 - Preserve source token/component roles instead of repurposing them.
+- Preserve imagery/media roles. Use real/generated/stock assets when possible; use an
+  intentional placeholder with art direction when the needed asset is unavailable.
 - Translate everything to the user's product, audience, and constraints.
 
 ## Screens

@@ -70,6 +70,8 @@ technical confidence, restrained neutral canvas.
 Borrow only: editorial type hierarchy, productivity spacing, fintech proof treatment.
 Role rules: green proof accent only for selected state/value proof; product screenshot
 frames only for evidence; cards use pricing-screen interaction rules, not decoration.
+Media strategy: real product screenshots when available; otherwise fixed-ratio screenshot
+placeholders with labels and art direction, not fake decorative app mockups.
 Reject: cream editorial canvas, serif hero, muted clay/orange accent, decorative cards.
 Token commitments: white/charcoal/cool-neutral canvas, sans typography, green proof
 accent, 8px max radius, thin borders, product screenshots as evidence.
@@ -184,6 +186,7 @@ Journey logic:
 | Palette | White, charcoal, cool neutrals, muted green accent | Style B + fintech reference + brief | Accent only for value proof and selected actions | Trustworthy and precise; avoids generic blue/purple SaaS |
 | Typography | Sans-led hierarchy, tight headings, readable 15-16px body | Style B + Style A hierarchy | Use hierarchy, not decorative serif voice | Premium without becoming decorative or literary |
 | Layout | Precise grid, compact comparison structure, proof near decision points | Style B + pricing screens | Grid is the core layout rule, not generic stacked sections | Keeps the page scannable for evaluation buyers |
+| Media | Product screenshots as evidence panels | Style B + brief | Use real screenshots or labeled placeholders; no fake decorative mockups | Keeps proof honest without low-quality invented imagery |
 | Cards | Thin borders, subtle selected state, no heavy shadows | Pricing screens + anti-slop card rule | Cards only for plan comparison and interaction | Keeps evaluation calm and scannable |
 | CTA hierarchy | Pro trial primary, Enterprise sales secondary | Pricing screens + buyer journey | Primary treatment only for self-serve action | Supports self-serve and sales-led paths |
 | Proof | ROI metrics near pricing, security near Enterprise | Screen research + buyer objections | Proof modules near the decision they support | Answers buyer objections where they appear |

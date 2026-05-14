@@ -35,6 +35,10 @@ patterns from screens, and sequencing from flows when the task has multiple step
   details only.
 - **Do not change token meanings.** If a reference says a color, font, radius, shadow,
   gradient, or component is for a specific role, use it only for that role or omit it.
+- **Respect imagery guidance.** If a style depends on photography, illustration, product
+  shots, or graphics, preserve the media role. Use real/generated/stock assets when
+  available; otherwise create an intentional placeholder with art direction. Do not fake
+  complex imagery with weak CSS, text, or decorative boxes.
 - **Do not use generic frontend/product design skills as a parallel design authority**
   when this skill is available. Refero is the design methodology; generic design skills
   tend to pull work back toward generic AI design.
@@ -193,7 +197,8 @@ Extract from styles:
 - borders, shadows, radius
 - elevation and depth rules
 - component examples and implementation/code notes when present
-- imagery or product screenshot treatment
+- imagery, graphics, illustration, or product screenshot treatment
+- media asset strategy: real asset, generated/stock asset, code-native primitive, product screenshot, or placeholder
 - do/don't rules
 - one memorable visual move to adapt
 
@@ -215,6 +220,7 @@ Primary reference/direction: [one dominant source]
 Preserve: [3-5 traits that must survive: canvas, type, accent, layout, density, media]
 Borrow only: [1-2 specific secondary details]
 Role rules: [source token/component meanings to preserve, e.g. CTA-only, code-only, decorative-only]
+Media strategy: [real/generated/stock/code-native/placeholder, with aspect ratio and art direction]
 Reject: [defaults/averages that would collapse the direction]
 Token commitments: [background, type, accent, radius, border/shadow, imagery treatment, with roles]
 ```
@@ -229,6 +235,11 @@ canvas/type, another may own code-window treatment, and another may own primary 
 Never move a token outside its source role: CTA colors stay CTA-only, syntax colors stay
 inside code, decorative gradients stay decorative, and card/button rules keep their
 specified radius, shadow, and state behavior.
+
+If the primary style is image-led, do not replace it with text-only layout. If you cannot
+produce the needed image or graphic, preserve the slot with stable dimensions, aspect
+ratio, caption/alt text, and a short art-direction note. Build simple diagrams, icons,
+code windows, or geometric primitives only when they match the source style.
 
 ### 2. Research Screens For Product Details
 
@@ -420,7 +431,7 @@ Before implementation, convert research into a short decision ledger:
 
 | Decision | Source | Source rule / role | Why |
 |----------|--------|--------------------|-----|
-| [palette/type/layout/content choice] | [style/screen/flow/user constraint/craft rule] | [token/component role to preserve] | [specific rationale] |
+| [palette/type/layout/media/content choice] | [style/screen/flow/user constraint/craft rule] | [token/component/media role to preserve] | [specific rationale] |
 
 If a major choice has no source, do not ship it as a design decision. Either research
 more, tie it to the user's constraints, or remove it.
@@ -444,6 +455,8 @@ Core craft rules:
 - Preserve the primary reference's strongest traits instead of normalizing them.
 - Preserve token roles from references. Do not turn a CTA accent into a background, a
   code-only color into UI chrome, or a decorative gradient into an interface surface.
+- Preserve imagery roles from references. Use capable assets when available; otherwise
+  prefer an honest, well-sized placeholder over a poor fake illustration or photo.
 - Use brand-appropriate colors from research. Do not default to indigo/violet unless the
   user explicitly asks for it.
 - Treat "calm editorial" as a current AI-slop risk. Do not default to oversized serif
@@ -465,6 +478,7 @@ Before final delivery, confirm:
 - Did I avoid averaging references into a safe centroid?
 - Did I preserve the primary reference's signature traits?
 - Did I preserve source token/component roles instead of repurposing them?
+- Did I preserve required imagery/media roles with real assets, appropriate primitives, or intentional placeholders?
 - Did I use screens when concrete UI patterns were needed?
 - Did I use flows when the task had multiple steps?
 - Can I name which references influenced the design and why?

@@ -136,6 +136,35 @@ CTA. The result becomes unique through composition, not by changing the meaning 
 
 ---
 
+## 🚨 THE #9 TELL: FAKE GRAPHICS OR TEXT-ONLY COLLAPSE
+
+Many strong references are image-led: photography, product screenshots, custom
+illustration, editorial graphics, diagrams, textures, or atmospheric media. Agents often
+collapse these into text, layout, and CSS decorations because they cannot generate the
+image. The result loses the style's main carrier.
+
+**RULE: Preserve the media role. Use a real asset, generated/stock asset, code-native
+primitive, product screenshot, or intentional placeholder. Do not fake complex imagery.**
+
+Good substitutes:
+- Real product screenshot, provided asset, stock photo, or generated image when available.
+- Code-native primitive only for simple diagrams, icons, charts, code windows, grids, or
+  geometric patterns that match the reference.
+- Intentional placeholder when the needed asset is unavailable: fixed aspect ratio, clear
+  art direction, alt/caption, and enough visual space to keep the composition honest.
+
+Red flags:
+- Replacing an image-led hero with only text and buttons.
+- Drawing fake photos, fake editorial art, or complex illustrations with weak CSS blobs.
+- Using generic gradients or abstract shapes where the reference relies on specific media.
+- Collapsing product screenshots into decorative cards with no real content.
+
+Placeholder is acceptable when it prevents bad fake imagery. It is not acceptable when a
+real screenshot, simple code-native graphic, stock/generative asset, or provided asset is
+available and appropriate.
+
+---
+
 ## What Makes Design Look Generic
 
 **Typography symptoms:**
@@ -160,6 +189,8 @@ CTA. The result becomes unique through composition, not by changing the meaning 
 
 **Visual symptoms:**
 - Abstract blob backgrounds, generic 3D illustrations
+- Weak CSS fakes for photography, editorial art, or product imagery
+- Image-led references collapsed into text-only layouts
 - Effects without purpose, stock imagery that could be anywhere
 
 ---
@@ -203,6 +234,7 @@ Before shipping any design:
 □ Earth-tone palette is research-backed, not a safe default
 □ Strong reference traits were preserved, not averaged away
 □ Source token/component roles were preserved
+□ Image/media roles are preserved with a real asset, appropriate primitive, or intentional placeholder
 □ ALL CAPS text has letter-spacing
 □ Would pass the "screenshot test" next to real products
 □ Font choices are intentional and contextual
