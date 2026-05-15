@@ -2,7 +2,7 @@
 
 # Refero Skill
 
-An agent skill that gives your AI a research-first design workflow: styles-first visual research, real-screen pattern research, flow reasoning, reference locks, decision ledgers, anti-AI-slop checks, and craft knowledge on typography, color, spacing, motion, icons, and copywriting. When Refero MCP is available, it can also use curated visual styles, 150,000+ real app screens, and 6,000+ user flows from Stripe, Linear, Notion, Figma, and the best-designed products ever built.
+An agent skill that makes design research mandatory before implementation: styles-first visual research, real-screen pattern research, flow reasoning, reference locks, decision ledgers, anti-AI-slop checks, and craft knowledge on typography, color, spacing, motion, icons, and copywriting. When Refero MCP is available, it can use curated visual styles, 150,000+ real app screens, and 6,000+ user flows from Stripe, Linear, Notion, Figma, and the best-designed products ever built.
 
 ## Install
 
