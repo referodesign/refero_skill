@@ -446,18 +446,28 @@ When displaying numbers that need to align (tables, prices, stats):
 
 ### Text Wrapping for Headings
 
-Prevent orphaned words (single word on last line) in headings:
+Prevent orphaned words and awkward final lines in important text. A single word on the
+last line of a hero title usually looks accidental, not designed.
 
 ```css
-h1, h2, h3 {
-  text-wrap: balance;  /* Distributes words evenly across lines */
+h1, h2, h3,
+.hero-title,
+.card-title {
+  text-wrap: balance;  /* Balance short headings/display text */
 }
 
-/* Or for body text */
-p {
-  text-wrap: pretty;   /* Prevents orphans in paragraphs */
+.lead,
+.prose p {
+  text-wrap: pretty;   /* Improve prose wrapping selectively */
 }
 ```
+
+Use `balance` for short headings, captions, pull quotes, and card titles. Use `pretty`
+for lead/body prose when typography matters more than maximum performance. Do not apply
+either blindly to nav, buttons, tables, badges, code, form controls, or dense UI labels.
+
+Still inspect the actual breakpoints. If wrapping is still awkward, adjust copy, max-width,
+font-size, or line-height instead of trusting CSS alone.
 
 **Browser support:** Modern browsers. Graceful degradation — no harm if unsupported.
 
@@ -664,7 +674,8 @@ Clear hierarchy guides the eye. Test by squinting.
 - [ ] **Hierarchy:** Passes squint test
 - [ ] **Punctuation:** `…` not `...`, curly quotes, non-breaking spaces
 - [ ] **Numbers:** `tabular-nums` in tables/stats/prices
-- [ ] **Headings:** `text-wrap: balance` to prevent orphans
+- [ ] **Headings:** `text-wrap: balance`; no awkward one-word final lines
+- [ ] **Prose:** `text-wrap: pretty` only where typographic quality matters
 - [ ] **Overflow:** Text containers handle long content (truncate/clamp/break)
 
 ---

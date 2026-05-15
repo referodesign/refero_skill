@@ -467,6 +467,8 @@ Core craft rules:
 - Use real product evidence for copy, trust signals, objection handling, and section order.
 - Create at least one memorable detail: a visual move, interaction, layout choice, or copy
   detail users would remember.
+- Balance headings and short display text with `text-wrap: balance`; use `text-wrap: pretty`
+  selectively for prose. Check key breakpoints for orphan words and awkward final lines.
 - Keep accessibility and responsive behavior in the design, not as a late pass.
 
 ## Quality Gate
