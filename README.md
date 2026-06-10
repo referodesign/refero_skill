@@ -2,7 +2,7 @@
 
 # Refero Skill
 
-An agent skill that makes design research mandatory before implementation: styles-first visual research, real-screen pattern research, flow reasoning, reference locks, decision ledgers, anti-AI-slop checks, and craft knowledge on typography, color, spacing, motion, icons, and copywriting. When Refero MCP is available, it can use curated visual styles, 150,000+ real app screens, and 6,000+ user flows from Stripe, Linear, Notion, Figma, and the best-designed products ever built.
+An agent skill that makes design research mandatory before implementation: styles-first visual research, real-screen pattern research, flow reasoning, reference locks, optional visual exploration, post-build QA, and craft guidance. When Refero MCP is available, it can use curated visual styles, 150,000+ real app screens, and 6,000+ user flows from Stripe, Linear, Notion, Figma, and the best-designed products ever built.
 
 ## Install
 
@@ -31,13 +31,14 @@ On Claude.ai, add the contents of `SKILL.md` to your project knowledge.
 
 1. **Researches styles, screens, and flows** — starts with visual styles for taste and direction, then uses real screens and user flows for product patterns and journey logic when live Refero MCP tools are available.
 2. **Extracts patterns** — identifies specific design decisions and builds a reference list before touching code.
-3. **Applies craft knowledge** — uses built-in guides on typography, color, spacing, motion, icons, and copywriting. Flags anti-slop patterns before they appear.
-4. **Designs with evidence** — every decision traces back to a real product or a craft rule, not a training data average.
+3. **Routes the workflow** — goes directly to code for clear edits, or creates three reference-locked directions when exploration is valuable.
+4. **Applies craft knowledge** — uses built-in guides on typography, color, spacing, motion, icons, and copywriting. Flags anti-slop patterns before they appear.
+5. **Designs and validates with evidence** — every decision traces back to a real product or a craft rule, and substantial visual work gets checked against the locked target before handoff.
 
 <details>
 <summary>Files</summary>
 
-`SKILL.md` — Research-first methodology: styles-first visual research, screen/flow routing, synthesis, craft guidance, quality gates.
+`SKILL.md` — Research-first methodology: styles-first visual research, screen/flow routing, optional visual exploration, synthesis, craft guidance, quality gates.
 
 Reference guides: `typography.md`, `color.md`, `motion.md`, `icons.md`, `craft-details.md`, `anti-ai-slop.md`, `copywriting.md`, `mcp-tools.md`, `example-workflow.md`
 
