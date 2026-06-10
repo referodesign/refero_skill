@@ -106,7 +106,8 @@ The first time you call Refero, a browser window opens to sign in. After that it
 
 ## Contributing
 
-To add a new skill, create a directory under `skills/` with a `SKILL.md` file following the [Agent Skills](https://agentskills.io/) format.
+To improve this skill, keep `SKILL.md` focused on the core workflow and put detailed,
+conditional guidance in `references/`.
 
 ## License
 

@@ -7,7 +7,7 @@ styles for taste, screens for product patterns, flows for journeys.
 ## Image Generation Capability
 
 Image generation is optional. Use it only when the current environment exposes an image
-tool, or when the user has approved a CLI/API image workflow. The skill must still work
+tool, or when the user has approved a CLI/API image workflow. Refero must still work
 in Claude Code, Codex, Cursor, Gemini CLI, Lovable, and other MCP-compatible agents when
 no image tool exists.
 
@@ -30,7 +30,8 @@ with a clear source.
 
 1. Research styles first; add screens/flows when structure or journey matters.
 2. Create three distinct reference-locked directions with a primary source, traits to
-   preserve, borrowed details, media strategy, and rejects.
+   preserve, borrowed details, media strategy, and rejects, unless the user asks for a
+   different count.
 3. If image generation is available and worth the latency, generate one independent
    image per direction. Otherwise provide written directions with implementation-ready
    prompts.
