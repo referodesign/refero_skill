@@ -113,10 +113,12 @@ Choose the lightest workflow that can produce a high-quality result.
   work, or tasks with a concrete source to match. Research and lock the direction, then code.
 - **Visual exploration:** use when the user asks for variants, a new visual language, a
   major redesign, a landing page, or another high-visibility surface with several plausible
-  directions. Default to three reference-locked options and ask the user to choose.
+  directions. Default to three reference-locked options and ask the user to choose; see
+  [references/visual-workflow.md](references/visual-workflow.md).
 - **Audit:** use captured screenshots, Refero screens, or flows as evidence before critique.
 - **Asset generation:** use generated imagery only when the reference lock requires bitmap
-  media that code, icons, or existing assets cannot faithfully provide.
+  media that code, icons, or existing assets cannot faithfully provide; see
+  [references/visual-workflow.md](references/visual-workflow.md).
 
 ## Tool Routing
 
@@ -182,22 +184,10 @@ Use `refero_search_flows` when the task has a before/after sequence:
 After finding a strong flow, use `refero_get_flow` for step-by-step goals, actions,
 system responses, and completion states.
 
-### Image Generation Capability
+### Use Visual Workflow For Images And QA
 
-Image generation is optional. Use it only when the current environment exposes an image
-tool, or when the user has approved a CLI/API image workflow. This skill must still work
-in Claude Code, Codex, Cursor, Gemini CLI, Lovable, and other MCP-compatible agents when
-no image tool exists.
-
-In Codex Desktop, use the built-in `image_gen` / Image Gen tool when it is available.
-Generate each visual direction or bitmap asset as its own image result. Do not use browser
-screenshots, CSS drawings, inline SVG, or placeholder shapes as a substitute for generated
-bitmap assets when the reference lock calls for real imagery.
-
-If image generation is unavailable, present written reference-locked directions and
-implementation-ready prompts instead. Do not assume another agent can call Codex Desktop's
-built-in image tool just because Codex is installed locally; verify the tool is exposed
-and user-approved first.
+For image generation, visual options, generated assets, and visual QA, read
+[references/visual-workflow.md](references/visual-workflow.md) when the task needs it.
 
 ## Research Workflow
 
@@ -285,39 +275,8 @@ produce the needed image or graphic, preserve the slot with stable dimensions, a
 ratio, caption/alt text, and a short art-direction note. Build simple diagrams, icons,
 code windows, or geometric primitives only when they match the source style.
 
-### Optional: Generate Three Visual Directions
-
-Use this only when exploration is useful. Do not run it for small edits, obvious component
-work, or production fixes with a clear source.
-
-1. Research styles first; add screens/flows when structure or journey matters.
-2. Create three distinct reference-locked directions with a primary source, traits to
-   preserve, borrowed details, media strategy, and rejects.
-3. If image generation is available and worth the latency, generate one independent image
-   per direction. Otherwise provide written directions with implementation-ready prompts.
-4. Stop and ask the user to choose. The selected option becomes the visual target for
-   build and QA.
-
-Example format only. Replace these names and directions for every task based on the
-current brief and Refero research:
-
-```text
-1. [Direction name] — [specific layout, style, product framing, and primary reference].
-2. [Direction name] — [specific layout, style, product framing, and primary reference].
-3. [Direction name] — [specific layout, style, product framing, and primary reference].
-```
-
-### Visual Target Gate
-
-Before coding substantial visual work, identify the build target and what must not drift:
-
-```text
-Build target: [existing UI / user screenshot / Figma frame / URL capture / selected generated mockup / approved reference lock]
-What must not drift: [canvas, typography, accent roles, layout, media, density]
-```
-
-If no target exists and the visual direction is material, explore options or ask the user
-to approve one reference-locked direction first.
+For substantial visual exploration, generated mockups, bitmap assets, or post-build visual
+QA, follow [references/visual-workflow.md](references/visual-workflow.md).
 
 ### 2. Research Screens For Product Details
 
@@ -514,25 +473,6 @@ Before implementation, convert research into a short decision ledger:
 If a major choice has no source, do not ship it as a design decision. Either research
 more, tie it to the user's constraints, or remove it.
 
-## Generated Assets
-
-Generate assets only when the reference lock needs bitmap media: hero/product imagery,
-illustrations, textures, thumbnails, cutouts, or required replacement assets. Do not use
-image generation for standard icons, editable SVG systems, code-native UI, or fake product
-evidence.
-
-Before generating, write a short asset lock:
-
-```text
-Asset role: [hero image / texture / illustration / thumbnail / cutout]
-Slot: [dimensions/aspect ratio/location]
-Art direction: [source, palette, subject, rendering, crop, density]
-Avoid: [wrong palette, extra text, brand drift, generic placeholders]
-```
-
-Generated assets must be placed into the implementation before handoff or documented as
-blocked.
-
 ## Design Craft
 
 After research, execute like a senior product designer. Use the bundled references only
@@ -545,9 +485,6 @@ when relevant; do not load every file by default.
 - Forms, focus, images, touch, performance, accessibility: [references/craft-details.md](references/craft-details.md)
 - Copywriting and persuasion: [references/copywriting.md](references/copywriting.md)
 - Anti-AI-slop checks: [references/anti-ai-slop.md](references/anti-ai-slop.md)
-
-Use the same relevant references during QA when judging typography, color, motion,
-icons, accessibility, images, copy, and generic-design drift.
 
 Core craft rules:
 
@@ -593,26 +530,8 @@ Before final delivery, confirm:
 
 If the answer is no, research or refine more before delivering.
 
-After implementation, run a visual QA pass for substantial UI/design work:
-
-```text
-Source truth: [reference lock / selected mockup / screenshot / Figma / URL capture]
-Implementation evidence: [local screenshot, deployed URL screenshot, or captured app state]
-Viewport/state: [desktop/mobile, route, theme, interaction state]
-Final result: [passed / blocked]
-```
-
-Check typography, spacing/layout, colors/tokens, imagery/assets, relevant component states,
-and product copy. Classify issues by severity:
-
-- `P0`: broken task, unreadable/overlapping UI, or severe accessibility issue
-- `P1`: major design drift or likely user-facing usability regression
-- `P2`: moderate visual mismatch, missing state, responsive issue, or asset drift
-- `P3`: polish that can follow after handoff
-
-Do not hand off visual work with unresolved P0/P1/P2 findings unless clearly blocked by
-missing source access, missing assets, or an unavailable tool. If blocked, say what evidence
-is missing and what should be checked next.
+For substantial visual work, run the visual QA pass in
+[references/visual-workflow.md](references/visual-workflow.md) before handoff.
 
 ## Example
 

@@ -40,7 +40,7 @@ On Claude.ai, add the contents of `SKILL.md` to your project knowledge.
 
 `SKILL.md` — Research-first methodology: styles-first visual research, screen/flow routing, optional visual exploration, synthesis, craft guidance, quality gates.
 
-Reference guides: `typography.md`, `color.md`, `motion.md`, `icons.md`, `craft-details.md`, `anti-ai-slop.md`, `copywriting.md`, `mcp-tools.md`, `example-workflow.md`
+Reference guides: `typography.md`, `color.md`, `motion.md`, `icons.md`, `craft-details.md`, `anti-ai-slop.md`, `copywriting.md`, `visual-workflow.md`, `mcp-tools.md`, `example-workflow.md`
 
 </details>
 
