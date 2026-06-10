@@ -189,6 +189,11 @@ tool, or when the user has approved a CLI/API image workflow. This skill must st
 in Claude Code, Codex, Cursor, Gemini CLI, Lovable, and other MCP-compatible agents when
 no image tool exists.
 
+In Codex Desktop, use the built-in `image_gen` / Image Gen tool when it is available.
+Generate each visual direction or bitmap asset as its own image result. Do not use browser
+screenshots, CSS drawings, inline SVG, or placeholder shapes as a substitute for generated
+bitmap assets when the reference lock calls for real imagery.
+
 If image generation is unavailable, present written reference-locked directions and
 implementation-ready prompts instead. Do not assume another agent can call Codex Desktop's
 built-in image tool just because Codex is installed locally; verify the tool is exposed
@@ -293,10 +298,13 @@ work, or production fixes with a clear source.
 4. Stop and ask the user to choose. The selected option becomes the visual target for
    build and QA.
 
+Example format only. Replace these names and directions for every task based on the
+current brief and Refero research:
+
 ```text
-1. Warm Studio Workbench — light editor-led landing page with stacked product panels.
-2. Midnight Terminal Proof — dark command-center page with terminal/demo evidence.
-3. Clean Developer Docs — white documentation-led product page with code tabs.
+1. [Direction name] — [specific layout, style, product framing, and primary reference].
+2. [Direction name] — [specific layout, style, product framing, and primary reference].
+3. [Direction name] — [specific layout, style, product framing, and primary reference].
 ```
 
 ### Visual Target Gate
