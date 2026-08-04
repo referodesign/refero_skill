@@ -1,0 +1,4 @@
+interface:
+  display_name: "Refero Design"
+  short_description: "Research-first UI and product design"
+  default_prompt: "Use $refero-design to research references and design this interface."

@@ -1,0 +1,47 @@
+{
+  "name": "refero",
+  "version": "1.0.0",
+  "description": "Research real product interfaces and design with evidence from Refero.",
+  "author": {
+    "name": "Refero",
+    "email": "support@refero.design",
+    "url": "https://refero.design"
+  },
+  "homepage": "https://refero.design/mcp",
+  "repository": "https://github.com/referodesign/refero_skill",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "ui",
+    "ux",
+    "product-design",
+    "design-research",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Refero",
+    "shortDescription": "Research real UI and design with evidence",
+    "longDescription": "Use Refero's design skill and read-only MCP tools to research visual styles, real product screens, and user flows before designing or implementing an interface.",
+    "developerName": "Refero",
+    "category": "Creativity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://refero.design",
+    "privacyPolicyURL": "https://refero.design/privacy",
+    "termsOfServiceURL": "https://refero.design/terms",
+    "defaultPrompt": [
+      "Find visual references and design a landing page.",
+      "Research real onboarding patterns before designing the flow.",
+      "Improve this interface using Refero styles and screens."
+    ],
+    "brandColor": "#111111",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "screenshots": [
+      "./assets/banner.png"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "refero",
+  "version": "1.0.0",
+  "description": "Research real product interfaces and design with evidence from Refero.",
+  "mcpServers": {
+    "refero": {
+      "httpUrl": "https://api.refero.design/mcp"
+    }
+  }
+}
