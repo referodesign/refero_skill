@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "refero",
+  "displayName": "Refero",
+  "version": "1.0.0",
+  "description": "Research real product interfaces and design with evidence from Refero.",
+  "author": {
+    "name": "Refero",
+    "email": "support@refero.design",
+    "url": "https://refero.design"
+  },
+  "homepage": "https://refero.design/mcp",
+  "repository": "https://github.com/referodesign/refero_skill",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "ui",
+    "ux",
+    "product-design",
+    "design-research",
+    "mcp"
+  ]
+}

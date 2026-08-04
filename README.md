@@ -1,113 +1,96 @@
 ![Refero Design Skill](assets/banner.png)
 
-# Refero Skill
+# Refero
 
-An agent skill that makes design research mandatory before implementation: styles-first visual research, real-screen pattern research, flow reasoning, reference locks, optional visual exploration, post-build QA, and craft guidance. When Refero MCP is available, it can use curated visual styles, 150,000+ real app screens, and 6,000+ user flows from Stripe, Linear, Notion, Figma, and the best-designed products ever built.
+Refero packages one design skill and one read-only MCP connection for AI design work.
+The skill makes research mandatory before implementation. With live Refero research, agents
+can use curated visual styles, 150,000+ real app screens, and 6,000+ user flows from
+well-designed products.
 
 ## Install
 
-Works with Claude Code, Cursor, Gemini CLI, Lovable, and any MCP-compatible agent.
+### Codex app and CLI
+
+```bash
+codex plugin marketplace add referodesign/refero_skill
+codex plugin add refero@refero
+```
+
+Restart the app after installation. The first connection opens Refero in the browser for
+OAuth sign-in.
+
+### Claude Code
+
+```text
+/plugin marketplace add referodesign/refero_skill
+/plugin install refero@refero
+```
+
+### Gemini CLI
+
+```bash
+gemini extensions install https://github.com/referodesign/refero_skill
+```
+
+### Cursor
+
+After the marketplace listing is approved, open Cursor's plugin marketplace or run
+`/add-plugin` and search for **Refero**.
+
+### Standalone skill
+
+Use this when the client already has Refero MCP configured or only the design methodology
+is needed:
 
 ```bash
 npx skills add https://github.com/referodesign/refero_skill --skill refero-design
 ```
 
-Craft knowledge loads immediately. No account required.
-
-<details>
-<summary>Manual installation</summary>
-
-```bash
-git clone https://github.com/referodesign/refero_skill.git ~/.claude/skills/refero-design
-```
-
-On Claude.ai, add the contents of `SKILL.md` to your project knowledge.
-
-</details>
-
----
+No account is required for the bundled craft references. Live Refero research uses OAuth
+when the MCP client first connects to `https://api.refero.design/mcp`.
 
 ## What it does
 
-1. **Researches styles, screens, and flows** — starts with visual styles for taste and direction, then uses real screens and user flows for product patterns and journey logic when live Refero MCP tools are available.
-2. **Extracts patterns** — identifies specific design decisions and builds a reference list before touching code.
-3. **Routes the workflow** — goes directly to code for clear edits, or creates three reference-locked directions when exploration is valuable.
-4. **Applies craft knowledge** — uses built-in guides on typography, color, spacing, motion, icons, and copywriting. Flags anti-slop patterns before they appear.
-5. **Designs and validates with evidence** — every decision traces back to a real product or a craft rule, and substantial visual work gets checked against the locked target before handoff.
+1. Researches visual styles first, then real screens and user flows when the task needs them.
+2. Extracts concrete patterns and locks references before implementation.
+3. Applies bundled guidance for typography, color, spacing, motion, icons, and copywriting.
+4. Keeps design decisions tied to evidence instead of generic AI defaults.
+5. Checks substantial visual work against the selected direction before handoff.
 
-<details>
-<summary>Files</summary>
+## What is included
 
-`SKILL.md` — Research-first methodology: styles-first visual research, screen/flow routing, optional visual exploration, synthesis, craft guidance, quality gates.
+- `skills/refero-design/` — the single canonical skill and its references.
+- `.mcp.json` — Refero MCP for Codex and Claude Code plugin installs.
+- `mcp.json` — Refero MCP for Cursor plugin installs.
+- `gemini-extension.json` — Gemini CLI extension manifest.
+- `.codex-plugin/`, `.claude-plugin/`, and `.cursor-plugin/` — platform metadata.
+- `server.json` — official MCP Registry metadata.
 
-Reference guides: `typography.md`, `color.md`, `motion.md`, `icons.md`, `craft-details.md`, `anti-ai-slop.md`, `copywriting.md`, `visual-workflow.md`, `mcp-tools.md`, `example-workflow.md`
+All connection manifests use the same production endpoint and contain no access tokens.
 
-</details>
+## Existing standalone installations
 
----
+Older clones placed `SKILL.md` at the repository root. Remove that old installation and
+run the standalone install command again. The current skill lives at
+`skills/refero-design/SKILL.md`; keeping both layouts creates duplicate skills.
 
-## Connect live design research
+For manual installation, copy the entire `skills/refero-design/` directory into the
+client's skills directory so its `references/` files remain beside `SKILL.md`.
 
-Set up Refero MCP from [refero.design/mcp](https://refero.design/mcp), then connect your tool:
-
-<details>
-<summary>Claude Code</summary>
-
-```bash
-claude mcp add --transport http refero https://api.refero.design/mcp --header "Authorization: Bearer <token>"
-```
-
-</details>
-
-<details>
-<summary>Cursor</summary>
-
-Add to `.cursor/mcp.json`:
-```json
-{
-  "mcpServers": {
-    "refero": {
-      "url": "https://api.refero.design/mcp",
-      "headers": { "Authorization": "Bearer <token>" }
-    }
-  }
-}
-```
-
-</details>
-
-<details>
-<summary>Gemini CLI</summary>
+## Validate a release
 
 ```bash
-gemini mcp add --transport http refero https://api.refero.design/mcp --header "Authorization: Bearer <token>"
+scripts/check-release
 ```
 
-</details>
+The check validates manifests, versions, local links, the canonical MCP URL, package
+boundaries, and common secret leaks. Platform-native validation and clean-profile install
+tests are still run before tagging a release.
 
-<details>
-<summary>Lovable</summary>
+## Security
 
-Settings → Connectors → New MCP server → `https://api.refero.design/mcp` → Bearer token
-
-</details>
-
-<details>
-<summary>Other tools</summary>
-
-```
-URL: https://api.refero.design/mcp
-Auth: Bearer <token>
-```
-
-</details>
-
-The first time you call Refero, a browser window opens to sign in. After that it's automatic.
-
-## Contributing
-
-To improve this skill, keep `SKILL.md` focused on the core workflow and put detailed,
-conditional guidance in `references/`.
+Report vulnerabilities privately to [support@refero.design](mailto:support@refero.design).
+See [SECURITY.md](SECURITY.md) for details.
 
 ## License
 

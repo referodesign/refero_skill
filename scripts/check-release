@@ -1,0 +1,170 @@
+#!/usr/bin/env python3
+"""Validate the Refero distribution package before release."""
+
+from __future__ import annotations
+
+import json
+import re
+import sys
+from pathlib import Path
+from urllib.parse import unquote
+
+
+ROOT = Path(__file__).resolve().parent.parent
+SKILL = ROOT / "skills" / "refero-design" / "SKILL.md"
+MCP_URL = "https://api.refero.design/mcp"
+
+JSON_FILES = [
+    ".codex-plugin/plugin.json",
+    ".agents/plugins/marketplace.json",
+    ".claude-plugin/plugin.json",
+    ".claude-plugin/marketplace.json",
+    ".cursor-plugin/plugin.json",
+    ".mcp.json",
+    "mcp.json",
+    "gemini-extension.json",
+    "server.json",
+]
+
+REQUIRED = [
+    "VERSION",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "assets/icon.png",
+    "assets/banner.png",
+    "skills/refero-design/SKILL.md",
+    "skills/refero-design/agents/openai.yaml",
+    "skills/refero-design/references/mcp-tools.md",
+    *JSON_FILES,
+]
+
+
+errors: list[str] = []
+
+
+def fail(message: str) -> None:
+    errors.append(message)
+
+
+def load_json(relative: str) -> object:
+    path = ROOT / relative
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        fail(f"{relative}: invalid JSON ({exc})")
+        return {}
+
+
+for relative in REQUIRED:
+    if not (ROOT / relative).is_file():
+        fail(f"missing required file: {relative}")
+
+for path in ROOT.rglob("*"):
+    if ".git" in path.parts:
+        continue
+    if path.is_symlink():
+        fail(f"symlink is not allowed in the package: {path.relative_to(ROOT)}")
+
+skill_files = [
+    path.relative_to(ROOT)
+    for path in ROOT.rglob("SKILL.md")
+    if ".git" not in path.parts
+]
+if skill_files != [Path("skills/refero-design/SKILL.md")]:
+    fail(f"expected one canonical SKILL.md, found: {skill_files}")
+
+try:
+    version = (ROOT / "VERSION").read_text(encoding="utf-8").strip()
+except OSError:
+    version = ""
+if not re.fullmatch(r"(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)", version):
+    fail(f"VERSION must be strict semver, got: {version!r}")
+
+documents = {relative: load_json(relative) for relative in JSON_FILES}
+
+version_paths = {
+    ".codex-plugin/plugin.json": documents[".codex-plugin/plugin.json"],
+    ".claude-plugin/plugin.json": documents[".claude-plugin/plugin.json"],
+    ".cursor-plugin/plugin.json": documents[".cursor-plugin/plugin.json"],
+    "gemini-extension.json": documents["gemini-extension.json"],
+    "server.json": documents["server.json"],
+}
+for relative, document in version_paths.items():
+    actual = document.get("version") if isinstance(document, dict) else None
+    if actual != version:
+        fail(f"{relative}: version {actual!r} does not match VERSION {version!r}")
+
+claude_market = documents[".claude-plugin/marketplace.json"]
+try:
+    claude_version = claude_market["plugins"][0]["version"]
+except (KeyError, IndexError, TypeError):
+    claude_version = None
+if claude_version != version:
+    fail(".claude-plugin/marketplace.json: plugin version does not match VERSION")
+
+url_checks = {
+    ".mcp.json": ("mcpServers", "refero", "url"),
+    "mcp.json": ("mcpServers", "refero", "url"),
+    "gemini-extension.json": ("mcpServers", "refero", "httpUrl"),
+}
+for relative, keys in url_checks.items():
+    value = documents[relative]
+    try:
+        for key in keys:
+            value = value[key]
+    except (KeyError, TypeError):
+        value = None
+    if value != MCP_URL:
+        fail(f"{relative}: Refero MCP URL must be {MCP_URL}")
+
+server = documents["server.json"]
+try:
+    remote = server["remotes"][0]
+except (KeyError, IndexError, TypeError):
+    remote = {}
+if server.get("name") != "io.github.referodesign/refero":
+    fail("server.json: unexpected MCP Registry name")
+if remote.get("type") != "streamable-http" or remote.get("url") != MCP_URL:
+    fail("server.json: expected one production streamable-http remote")
+
+machine_manifest_paths = [ROOT / relative for relative in JSON_FILES]
+secret_patterns = [
+    re.compile(r"BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY"),
+    re.compile(r"\bghp_[A-Za-z0-9]{20,}\b"),
+    re.compile(r"\bgithub_pat_[A-Za-z0-9_]{20,}\b"),
+    re.compile(r"\bsk-[A-Za-z0-9]{20,}\b"),
+]
+for path in machine_manifest_paths:
+    if not path.is_file():
+        continue
+    text = path.read_text(encoding="utf-8")
+    if re.search(r'"Authorization"\s*:', text, flags=re.IGNORECASE):
+        fail(f"{path.relative_to(ROOT)}: Authorization headers are not allowed")
+    for pattern in secret_patterns:
+        if pattern.search(text):
+            fail(f"{path.relative_to(ROOT)}: possible secret detected")
+
+markdown_link = re.compile(r"!?\[[^\]]*\]\(([^)]+)\)")
+for path in [ROOT / "README.md", SKILL, *(SKILL.parent / "references").glob("*.md")]:
+    if not path.is_file():
+        continue
+    for target in markdown_link.findall(path.read_text(encoding="utf-8")):
+        target = target.strip().split("#", 1)[0]
+        if not target or target.startswith(("http://", "https://", "mailto:", "#")):
+            continue
+        resolved = (path.parent / unquote(target)).resolve()
+        try:
+            resolved.relative_to(ROOT)
+        except ValueError:
+            fail(f"{path.relative_to(ROOT)}: link escapes package: {target}")
+            continue
+        if not resolved.exists():
+            fail(f"{path.relative_to(ROOT)}: broken local link: {target}")
+
+if errors:
+    for error in errors:
+        print(f"ERROR: {error}", file=sys.stderr)
+    raise SystemExit(1)
+
+print(f"Refero release {version} is valid.")

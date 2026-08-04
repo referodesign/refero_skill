@@ -1,0 +1,20 @@
+{
+  "name": "refero",
+  "interface": {
+    "displayName": "Refero"
+  },
+  "plugins": [
+    {
+      "name": "refero",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/referodesign/refero_skill.git"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}
