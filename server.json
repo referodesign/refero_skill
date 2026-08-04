@@ -3,7 +3,7 @@
   "name": "io.github.referodesign/refero",
   "title": "Refero",
   "description": "Search curated design styles, real product screens, and user flows for evidence-based design work.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "remotes": [
     {
       "type": "streamable-http",

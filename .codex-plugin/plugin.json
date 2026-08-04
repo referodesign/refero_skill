@@ -1,6 +1,6 @@
 {
   "name": "refero",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Research real product interfaces and design with evidence from Refero.",
   "author": {
     "name": "Refero",
@@ -30,9 +30,9 @@
       "Read"
     ],
     "websiteURL": "https://refero.design",
-    "privacyPolicyURL": "https://refero.design/privacy-policy",
-    "termsOfServiceURL": "https://refero.design/terms-of-use",
-    "supportURL": "https://refero.design/mcp",
+    "privacyPolicyURL": "https://doc.refero.design/legal/privacy-policy",
+    "termsOfServiceURL": "https://doc.refero.design/legal/terms-of-use",
+    "supportURL": "https://doc.refero.design/help/contact",
     "defaultPrompt": [
       "Find visual references and design a landing page.",
       "Research real onboarding patterns before designing the flow.",
