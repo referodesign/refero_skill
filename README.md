@@ -9,7 +9,13 @@ well-designed products.
 
 ## Install
 
-### Codex app and CLI
+### ChatGPT / Codex
+
+[Install Refero from the OpenAI Plugins Directory](https://chatgpt.com/plugins/plugin_asdk_app_6a72258e6f18819183e5c4d8a56b78d9).
+
+The plugin includes Refero MCP and Refero Skill. Sign in with your Refero account when prompted; no manual MCP config or separate skill installation is needed. Live research requires a paid Refero plan. See the [setup guide](https://doc.refero.design/mcp/getting-started).
+
+### Codex app and CLI — install from GitHub
 
 ```bash
 codex plugin marketplace add referodesign/refero_skill
